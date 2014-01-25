@@ -32,13 +32,20 @@ $(document).ready(function(){
             renderTo: 'plot_window',
             plotBackgroundColor: null,
             plotBorderWidth: null,
-            plotShadow: false
+            plotShadow: false,
+            zoomType: 'x'
         },
+        rangeSelector: {
+	    	selected: 1
+	    },
         colors: ['#0000CC','#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
         legend: {
             itemStyle: {
                 fontSize: '18px'
                 }
+        },
+        scrollbar: {
+            enabled: true
         },
         title: {
             text: <%= raw @titlestring.to_json %>,
@@ -46,6 +53,15 @@ $(document).ready(function(){
                 fontSize: '22px',
                 fontWeight: 'bold'
             }
+        },
+        tooltip: {
+            shared: true,
+            useHTML: true,
+            headerFormat: '<small>{point.key}</small><table>',
+            pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+            '<td style="text-align: right"><b>{point.y}</b></td></tr>',
+            footerFormat: '</table>',
+            valueDecimals: 1
         },
         xAxis: {
             type: 'datetime',
