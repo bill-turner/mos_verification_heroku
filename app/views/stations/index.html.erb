@@ -2,7 +2,9 @@
 
 <%fields=[['Temperature',:tmp],['Dewpoint',:dpt],['WindSpeed',:wsp],['WindDir',:wdr]]%>
 
-<div id="header">ProjectX 0.87 </div>
+<div id="header">
+<pre>Verification of MOS forecasts for the past week</pre>
+<%= link_to 'Github','http://github.com/bill-turner/mos_verification'</div>
 <div id="state_options">
 <%=   form_tag("/index", :id=>'state select') do                                                     %>
 <%=     label_tag(:userstate,"First Select a State:")                           %>
