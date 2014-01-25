@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3137038695">
+    <data-source source="LOCAL" name="Rails mos_verification: development" uuid="337f3468-4aea-4e27-bdf7-b48d95661f22">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:mos_verification_development</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails mos_verification: test" uuid="f60dad93-eab8-494a-8d4c-594bd1680116">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:mos_verification_test</jdbc-url>
+      <user-name>JamMaster_theflossy1</user-name>
+      <user-password>dfd9dfcfdfc9dfd8dfcfdfde</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails mos_verification: production" uuid="5f72f84c-a696-4b7f-a959-9f265d822aa9">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:mos_verification_production</jdbc-url>
+      <user-name>JamMaster_theflossy1</user-name>
+      <user-password>dfd9dfcfdfc9dfd8dfcfdfde</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

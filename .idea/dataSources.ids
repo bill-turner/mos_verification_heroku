@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails mos_verification: development" uuid="337f3468-4aea-4e27-bdf7-b48d95661f22">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails mos_verification: test" uuid="f60dad93-eab8-494a-8d4c-594bd1680116">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails mos_verification: production" uuid="5f72f84c-a696-4b7f-a959-9f265d822aa9">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
