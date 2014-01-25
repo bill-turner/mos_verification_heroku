@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,7 +107,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="68" selection-start="236" selection-end="236" vertical-scroll-proportion="0.4635193" vertical-offset="0" max-vertical-offset="2052">
+            <state line="4" column="64" selection-start="155" selection-end="155" vertical-scroll-proportion="0.17880794" vertical-offset="18" max-vertical-offset="2070">
               <folding />
             </state>
           </provider>
@@ -640,7 +641,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110456556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5287187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42709866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18051359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -762,23 +763,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="381" selection-end="381" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
@@ -790,9 +777,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="30" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="14" selection-start="381" selection-end="381" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="68" selection-start="236" selection-end="236" vertical-scroll-proportion="0.4635193" vertical-offset="0" max-vertical-offset="2052">
+        <state line="4" column="64" selection-start="155" selection-end="155" vertical-scroll-proportion="0.17880794" vertical-offset="18" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>
