@@ -2,6 +2,9 @@ MosVerification::Application.routes.draw do
   get "/index" => "stations#index"
   post "/index" => "stations#index"
   root :to => "stations#index"
+
+  get "stations/windrose" => "stations#windrose"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

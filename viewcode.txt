@@ -1,0 +1,85 @@
+<%fields=[['Temperature',:tmp],['Dewpoint',:dpt],['WindSpeed',:wsp],['WindDir',:wdr]]%>
+
+<%=   form_tag("/index") do                                                                    %>
+<%=     label_tag(:userstation, "StationID:")                                                  %>
+<%=     select_tag(:userstation,options_for_select(@stations,:selected=>@userstate)) %>
+<%=     select_tag(:userfield,options_for_select(fields,:selected=>@userfield))       %>
+<%=     submit_tag("Submit")                                                                   %>
+<%    end                                                                                      %>
+
+
+
+
+ $(document).ready(function(){
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'plot_window',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ['#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
+            legend: {
+                itemStyle: {
+                    fontSize: '18px'
+                    }
+            },
+            title: {
+                text: <%= raw @titlestring.to_json %>,
+                style: {
+                    fontSize: '22px',
+                    fontWeight: 'bold'
+                }
+            },
+            xAxis: {
+                type: 'datetime',
+                labels: {
+                    style: {
+                        fontSize: '16px'
+                    }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: <%= raw @var.to_json %>,
+                    style: {
+                        fontSize: '18px'
+                    }
+                },
+                labels: {
+                    style: {
+                        fontSize: '14px'
+                    }
+                }
+            },
+            series: [{
+                type: 'spline',
+                name: 'GFS 00Z',
+                data: <%= @gfs0Z.to_json %>
+            },
+            {   type: 'spline',
+                name: 'GFS 06Z',
+                data: <%= @gfs06Z.to_json %>
+
+            },
+            {   type: 'spline',
+                name: 'GFS 12Z',
+                data: <%= @gfs12Z.to_json %>
+            },
+            {
+                type: 'spline',
+                name: 'GFS 18Z',
+                data: <%= @gfs18Z.to_json %>
+            },{
+                type: 'spline',
+                name: 'NAM 0Z',
+                data: <%= @nam0Z.to_json %>
+            },{
+                type: 'spline',
+                name: 'NAM 12Z',
+                data: <%= @nam12Z.to_json %>
+            }]
+        })
+    });
+
+

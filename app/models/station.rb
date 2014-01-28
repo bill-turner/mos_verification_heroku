@@ -41,7 +41,7 @@ class Station < ActiveRecord::Base
   #get forecast data and return it as an array of hashes
   #hourstring is something like '06:00', '12:00',  model is 'GFS' or 'NAM'
   def fetch_mos(model,hourstring)
-    dates = 6.downto(0).map {|i| (Date.today - i.day).to_s}
+    dates = 4.downto(0).map {|i| (Date.today - i.day).to_s}
     #dates = [(Date.today).to_s]
     hash_array = Array.new
     dates.each do |day|
@@ -115,39 +115,36 @@ class Station < ActiveRecord::Base
     return s
   end
 
-
   def prep_mos_windrose(model,timestring)
-    windspeed_hash = self.blend_forecast(model,timestring,"wsp")
-    winddir_hash = self.blend_forecast(model,timestring,"Wdr")
-    array_of_winddirs = Station.sort_wind_dir(winddir_hash)
-    array_of_windspeeds = Station.sort_wind_spd(windspeed_hash)
+    winddir_hash = self.blend_forecast(model,timestring,"wdr")
+    sorted_data = Station.sort_wind_data(winddir_hash)
   end
 
   #input the hash_array with the forecast data, pull out the wdr data, sort it into bins [N,NNE,NE,ENE,E...NNW]
-  def self.sort_wind_dir(hash)
+  def self.sort_wind_data(hash)
     output_array = Array.new
-    n = hash.map {|row| if row[:wdr].to_f.between?(0,11.25)&&row[:wdr].to_f.between?(348.75,360) then row[:wdr] end}
-    nne = (hash.map {|row| if row[:wdr].to_f.between?(11.25,33.75) then row[:wdr] end})
-    ne = (hash.map {|row| if row[:wdr].to_f.between?(33.75,56.25) then row[:wdr] end})
-    ene = (hash.map {|row| if row[:wdr].to_f.between?(56.25,78.75) then row[:wdr] end})
-    e = (hash.map {|row| if row[:wdr].to_f.between?(78.75,101.25) then row[:wdr] end})
-    ese = (hash.map {|row| if row[:wdr].to_f.between?(101.25,123.75) then row[:wdr] end})
-    se = (hash.map {|row| if row[:wdr].to_f.between?(123.75,146.25) then row[:wdr] end})
-    sse = (hash.map {|row| if row[:wdr].to_f.between?(146.25,168.75) then row[:wdr] end})
-    s = (hash.map {|row| if row[:wdr].to_f.between?(168.75,191.25) then row[:wdr] end})
-    ssw = (hash.map {|row| if row[:wdr].to_f.between?(191.25,213.75) then row[:wdr] end})
-    sw = (hash.map {|row| if row[:wdr].to_f.between?(213.75,236.25) then row[:wdr] end})
-    wsw = (hash.map {|row| if row[:wdr].to_f.between?(236.25,258.75) then row[:wdr] end})
-    w = (hash.map {|row| if row[:wdr].to_f.between?(258.75,281.25) then row[:wdr] end})
-    wnw = (hash.map {|row| if row[:wdr].to_f.between?(281.25,303.75) then row[:wdr] end})
-    nw = (hash.map {|row| if row[:wdr].to_f.between?(303.75,326.25) then row[:wdr] end})
-    nnw = (hash.map {|row| if row[:wdr].to_f.between?(326.25,348.75) then row[:wdr] end})
+    n = hash.map {|row| if row[:wdr].to_f.between?(0,11.25)&&row[:wdr].to_f.between?(348.75,360) then [{row[:wdr]=>row[:wsp]}]end}
+    nne = (hash.map {|row| if row[:wdr].to_f.between?(11.25,33.75) then row[:wsp]end})
+    ne = (hash.map {|row| if row[:wdr].to_f.between?(33.75,56.25) then row[:wsp]end})
+    ene = (hash.map {|row| if row[:wdr].to_f.between?(56.25,78.75) then row[:wsp]end})
+    e = (hash.map {|row| if row[:wdr].to_f.between?(78.75,101.25) then row[:wsp]end})
+    ese = (hash.map {|row| if row[:wdr].to_f.between?(101.25,123.75) then row[:wsp]end})
+    se = (hash.map {|row| if row[:wdr].to_f.between?(123.75,146.25) then row[:wsp]end})
+    sse = (hash.map {|row| if row[:wdr].to_f.between?(146.25,168.75) then row[:wsp]end})
+    s = (hash.map {|row| if row[:wdr].to_f.between?(168.75,191.25) then row[:wsp]end})
+    ssw = (hash.map {|row| if row[:wdr].to_f.between?(191.25,213.75) then row[:wsp]end})
+    sw = (hash.map {|row| if row[:wdr].to_f.between?(213.75,236.25) then row[:wsp]end})
+    wsw = (hash.map {|row| if row[:wdr].to_f.between?(236.25,258.75) then row[:wsp]end})
+    w = (hash.map {|row| if row[:wdr].to_f.between?(258.75,281.25) then row[:wsp]end})
+    wnw = (hash.map {|row| if row[:wdr].to_f.between?(281.25,303.75) then row[:wsp]end})
+    nw = (hash.map {|row| if row[:wdr].to_f.between?(303.75,326.25) then row[:wsp]end})
+    nnw = (hash.map {|row| if row[:wdr].to_f.between?(326.25,348.75) then row[:wsp]end})
     output_array.push(n,nne,ne,ene,e,ese,se,sse,s,ssw,sw,wsw,w,wnw,nw,nnw)
     output_array.map! {|row| row.compact}
   end
 
 
-  def self.sort_wind_spd(wsp_hash)
+  def make_windrose(wsp_hash)
 
   end
 ###########################################################################################
@@ -160,7 +157,7 @@ class Station < ActiveRecord::Base
 ################### OBSERVATION PROCESSING FUNCTIONS ##########################################
 #############################################################################################
 
-  def fetch_past_obs(field)
+  def fetch_past_obs()
     begin_day, begin_month, begin_year, end_day, end_month, end_year = Station.get_date_info
     url =  "http://mesonet.agron.iastate.edu/cgi-bin/request/getData.py?station=#{self.name[1..3]}& \
     data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=p01i&data=mslp&&data=skyc1& \
@@ -171,7 +168,7 @@ class Station < ActiveRecord::Base
   end
 
   def self.get_date_info
-    begin_date = Date.today - 6.days
+    begin_date = Date.today - 4.days
     begin_year = begin_date.year.to_s
     begin_month = begin_date.month.to_s
     begin_day = begin_date.day.to_s
@@ -185,7 +182,9 @@ class Station < ActiveRecord::Base
   def self.parse_obs(url)
     require 'open-uri'
     data = Nokogiri.HTML(open(url)).text.split("\n").to_a.map {|row| row.split(',')}
+    #delete headers
     4.times {|i| data.delete_at(0)}
+    #sift
     return data
   end
 
@@ -200,6 +199,27 @@ class Station < ActiveRecord::Base
       [row[:vtime].to_datetime.to_i*1000, row[field.to_sym].to_f]
     end
   end
+
+
+
+  #get data from obs for past 6 hrs
+  def get_obs_from_past_6hrs(hash,field)
+    six_hr_threshold = (Time.now - 6.hours).datetime.to_i
+    output_array = Array.new
+    hash.each do |row|
+      if row[:ftime.to_datetime.to_i]>six_hr_threshold
+        output_array.push(row)
+      end
+    end
+  end
+
+
+  ########################STATISTICAL STUFF ############################################
+
+  def verify_last_6hrs_from(forecast,obs,field)
+
+  end
+
 
 end
 
