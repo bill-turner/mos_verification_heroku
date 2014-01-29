@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -32,19 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="station.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="station.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="4" selection-start="7016" selection-end="7017" vertical-scroll-proportion="0.07495069" vertical-offset="2138" max-vertical-offset="4256">
+            <state line="151" column="48" selection-start="7764" selection-end="7764" vertical-scroll-proportion="0.0" vertical-offset="2138" max-vertical-offset="4256">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stations_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="1368">
+            <state line="48" column="5" selection-start="2473" selection-end="2816" vertical-scroll-proportion="0.6607495" vertical-offset="529" max-vertical-offset="1368">
               <folding />
             </state>
           </provider>
@@ -114,10 +115,10 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/stations/windrose.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/station.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
         <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       </list>
     </option>
   </component>
@@ -1037,13 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="16" selection-start="727" selection-end="727" vertical-scroll-proportion="-16.666666" vertical-offset="180" max-vertical-offset="810">
@@ -1065,7 +1059,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="4" selection-start="7016" selection-end="7017" vertical-scroll-proportion="0.07495069" vertical-offset="2138" max-vertical-offset="4256">
+        <state line="151" column="48" selection-start="7764" selection-end="7764" vertical-scroll-proportion="0.0" vertical-offset="2138" max-vertical-offset="4256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="5" selection-start="2473" selection-end="2816" vertical-scroll-proportion="0.6607495" vertical-offset="529" max-vertical-offset="1368">
           <folding />
         </state>
       </provider>
