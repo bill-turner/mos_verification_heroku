@@ -5,37 +5,35 @@
   border: 2px solid black;
   border-radius: 5px;
   display: block;
-  height: 30px;
+  height: 25px;
   background-color: #F38630;
   margin-bottom: 5px;
   text-align: center;
 }
+#state_options{
+  width: 400px;
+  float: left
+}
 #station_options {
-  width: 600px;
+  width: 950px;
+  float: right
 }
 
 #plot_window {
   border: 2px solid black;
   border-radius: 5px;
   display: block;
-  width: 920px;
+  width: 900px;
   min-height: 480px;
   max-height: 550px;
   float: left;
   text-align: center;
 }
-#container {
+#windrose {
   border: 2px solid black;
   border-radius: 5px;
-  margin-left: 940px;
-  height: 400px;
-  width: 370px
-}
-
-#observed_windrose{
-  border: 2px solid black;
-  border-radius: 5px;
-  margin-left: 1060px;
-  height: 250px;
-  width: 250px
+  margin-left: 910px;
+  margin-top: 30px;
+  height: 420px;
+  width: 430px
 }

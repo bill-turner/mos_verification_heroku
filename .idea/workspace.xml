@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewcode.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/windrose.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mos_verification.iml" afterPath="$PROJECT_DIR$/.idea/mos_verification.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/station.rb" afterPath="$PROJECT_DIR$/app/models/station.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
@@ -26,8 +20,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mos_verification@db_migrate__mos_verification.coverage" NAME="db:migrate: mos_verification Coverage Results" MODIFIED="1390690570779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_drop__mos_verification.coverage" NAME="db:drop: mos_verification Coverage Results" MODIFIED="1390672423879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
-    <SUITE FILE_PATH="coverage/mos_verification@Rails_console__mos_verification.coverage" NAME="Rails console: mos_verification Coverage Results" MODIFIED="1390881600772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
-    <SUITE FILE_PATH="coverage/mos_verification@Development__mos_verification.coverage" NAME="Development: mos_verification Coverage Results" MODIFIED="1390881036129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
+    <SUITE FILE_PATH="coverage/mos_verification@Rails_console__mos_verification.coverage" NAME="Rails console: mos_verification Coverage Results" MODIFIED="1390968345222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
+    <SUITE FILE_PATH="coverage/mos_verification@Development__mos_verification.coverage" NAME="Development: mos_verification Coverage Results" MODIFIED="1390958838811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_create__mos_verification.coverage" NAME="db:create: mos_verification Coverage Results" MODIFIED="1390672441187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -45,12 +39,8 @@
       <file leaf-file-name="station.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="39" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="3510">
-              <folding>
-                <element signature="e#4898#5235#0" expanded="false" />
-                <element signature="e#5239#5402#0" expanded="false" />
-                <element signature="e#5518#7148#0" expanded="false" />
-              </folding>
+            <state line="230" column="63" selection-start="11117" selection-end="11117" vertical-scroll-proportion="0.0" vertical-offset="3418" max-vertical-offset="4256">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,7 +48,7 @@
       <file leaf-file-name="stations_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="27" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="719" max-vertical-offset="1260">
+            <state line="54" column="0" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="1368">
               <folding />
             </state>
           </provider>
@@ -73,36 +63,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="stations.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="10" selection-start="676" selection-end="676" vertical-scroll-proportion="0.5538462" vertical-offset="342" max-vertical-offset="846">
+            <state line="35" column="16" selection-start="727" selection-end="727" vertical-scroll-proportion="-16.666666" vertical-offset="180" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="windrose.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/stations/windrose.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="390" selection-end="390" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="1224">
+            <state line="138" column="51" selection-start="4451" selection-end="4451" vertical-scroll-proportion="0.8602941" vertical-offset="396" max-vertical-offset="2214">
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1390884539020" expanded="true" signature="872:892" placeholder="..." />
+                <element signature="e#1699#4059#0" expanded="false" />
+                <marker date="1390969554171" expanded="false" signature="2560:2581" placeholder="..." />
+                <marker date="1390969554171" expanded="false" signature="2631:2648" placeholder="..." />
+                <marker date="1390969554171" expanded="true" signature="4723:4743" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="-8.666667" vertical-offset="2286" max-vertical-offset="3366">
-              <folding>
-                <marker date="1390884975251" expanded="false" signature="2522:2543" placeholder="..." />
-                <marker date="1390884975251" expanded="false" signature="2593:2610" placeholder="..." />
-                <marker date="1390884975251" expanded="true" signature="4550:4570" placeholder="..." />
-              </folding>
+            <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,12 +116,12 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/viewcode.txt" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/station.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/stations/windrose.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/station.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
       </list>
     </option>
   </component>
@@ -145,10 +133,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="766" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -176,6 +164,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,6 +237,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -282,8 +276,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,7 +302,7 @@
       <recent name="C:\Sites\mos_verification\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: mos_verification">
+  <component name="RunManager" selected="IRB console.Rails console: mos_verification">
     <configuration default="false" name="db:create: mos_verification" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="mos_verification" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -673,25 +665,29 @@
       <created>1390675629616</created>
       <updated>1390675629616</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="started working on radar chart for wind data.">
+      <created>1390885209856</created>
+      <updated>1390885209856</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="766" extended-state="0" />
+    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110456556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8642534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32694247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18051359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26493108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18956336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45990923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3975782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -714,17 +710,114 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="full deploy test1&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="full deploy test1&#10;" />
+    <MESSAGE value="started working on radar chart for wind data." />
+    <option name="LAST_COMMIT_MESSAGE" value="started working on radar chart for wind data." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="378">
+        <state line="55" column="0" selection-start="2521" selection-end="2521" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="4176">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="27" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="10" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stations/windrose.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1224">
+          <folding>
+            <marker date="1390884539020" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3366">
+          <folding>
+            <element signature="e#1699#4059#0" expanded="false" />
+            <marker date="1390969554171" expanded="false" signature="2560:2581" placeholder="..." />
+            <marker date="1390969554171" expanded="false" signature="2631:2648" placeholder="..." />
+            <marker date="1390969554171" expanded="true" signature="4723:4743" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="39" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4158">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="27" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="10" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stations/windrose.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1224">
+          <folding>
+            <marker date="1390884539020" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3366">
+          <folding>
+            <element signature="e#1699#4059#0" expanded="false" />
+            <marker date="1390969554171" expanded="false" signature="2560:2581" placeholder="..." />
+            <marker date="1390969554171" expanded="false" signature="2631:2648" placeholder="..." />
+            <marker date="1390969554171" expanded="true" signature="4723:4743" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="378" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140125183706_create_stations.rb">
@@ -743,21 +836,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="1188">
-          <folding>
-            <marker date="1390690555681" expanded="true" signature="-1:-1" placeholder="development:" />
-          </folding>
-        </state>
+        <state line="21" column="14" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="1188" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="217" column="0" selection-start="9901" selection-end="9901" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4122">
-          <folding>
-            <element signature="e#4898#5235#0" expanded="false" />
-            <element signature="e#5239#5402#0" expanded="false" />
-            <element signature="e#5518#7148#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,16 +855,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/highcharts.src.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312516">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312516" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1170">
-          <folding />
-        </state>
+        <state line="3" column="30" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
@@ -793,18 +874,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="23" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2358">
           <folding>
-            <marker date="1390884975251" expanded="false" signature="2522:2543" placeholder="..." />
-            <marker date="1390884975251" expanded="false" signature="2593:2610" placeholder="..." />
-            <marker date="1390884975251" expanded="true" signature="4550:4570" placeholder="..." />
+            <element signature="e#1699#4059#0" expanded="false" />
+            <marker date="1390969554171" expanded="false" signature="2560:2581" placeholder="..." />
+            <marker date="1390969554171" expanded="false" signature="2631:2648" placeholder="..." />
+            <marker date="1390969554171" expanded="true" signature="4723:4743" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <folding />
-        </state>
+        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140125183706_create_stations.rb">
@@ -824,11 +904,7 @@
     <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="3798">
-          <folding>
-            <element signature="e#4898#5235#0" expanded="false" />
-            <element signature="e#5239#5402#0" expanded="false" />
-            <element signature="e#5518#7148#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -841,16 +917,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/highcharts.src.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312516">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312516" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1170">
-          <folding />
-        </state>
+        <state line="3" column="30" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
@@ -864,9 +936,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="64" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="2070">
           <folding>
-            <marker date="1390884975251" expanded="false" signature="2522:2543" placeholder="..." />
-            <marker date="1390884975251" expanded="false" signature="2593:2610" placeholder="..." />
-            <marker date="1390884975251" expanded="true" signature="4550:4570" placeholder="..." />
+            <element signature="e#1699#4059#0" expanded="false" />
+            <marker date="1390969554171" expanded="false" signature="2560:2581" placeholder="..." />
+            <marker date="1390969554171" expanded="false" signature="2631:2648" placeholder="..." />
+            <marker date="1390969554171" expanded="true" signature="4723:4743" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -878,11 +951,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="11" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1170">
-          <folding>
-            <marker date="1390690555681" expanded="true" signature="-1:-1" placeholder="development:" />
-          </folding>
-        </state>
+        <state line="21" column="11" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
@@ -901,9 +970,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1152">
-          <folding />
-        </state>
+        <state line="2" column="16" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1152" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
@@ -925,59 +992,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/highcharts.src.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312498">
-          <folding />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312498" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="14" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="1188" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewcode.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="12" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.33687" vertical-offset="1097" max-vertical-offset="1638" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stations/windrose.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1224">
+          <folding>
+            <marker date="1390884539020" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="378">
+        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="1188">
-          <folding>
-            <marker date="1390690555681" expanded="true" signature="-1:-1" placeholder="development:" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewcode.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="12" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.33687" vertical-offset="1097" max-vertical-offset="1638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="27" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="39" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="3510">
-          <folding>
-            <element signature="e#4898#5235#0" expanded="false" />
-            <element signature="e#5239#5402#0" expanded="false" />
-            <element signature="e#5518#7148#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -988,31 +1036,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stations/windrose.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="390" selection-end="390" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="1224">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1390884539020" expanded="true" signature="872:892" placeholder="..." />
-          </folding>
+        <state line="230" column="63" selection-start="11117" selection-end="11117" vertical-scroll-proportion="0.0" vertical-offset="3418" max-vertical-offset="4256">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="-8.666667" vertical-offset="2286" max-vertical-offset="3366">
-          <folding>
-            <marker date="1390884975251" expanded="false" signature="2522:2543" placeholder="..." />
-            <marker date="1390884975251" expanded="false" signature="2593:2610" placeholder="..." />
-            <marker date="1390884975251" expanded="true" signature="4550:4570" placeholder="..." />
-          </folding>
+        <state line="54" column="0" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="1368">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="10" selection-start="676" selection-end="676" vertical-scroll-proportion="0.5538462" vertical-offset="342" max-vertical-offset="846">
+        <state line="35" column="16" selection-start="727" selection-end="727" vertical-scroll-proportion="-16.666666" vertical-offset="180" max-vertical-offset="810">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="51" selection-start="4451" selection-end="4451" vertical-scroll-proportion="0.8602941" vertical-offset="396" max-vertical-offset="2214">
+          <folding>
+            <element signature="e#1699#4059#0" expanded="false" />
+            <marker date="1390969554171" expanded="false" signature="2560:2581" placeholder="..." />
+            <marker date="1390969554171" expanded="false" signature="2631:2648" placeholder="..." />
+            <marker date="1390969554171" expanded="true" signature="4723:4743" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

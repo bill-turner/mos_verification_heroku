@@ -52,7 +52,6 @@ class Station < ActiveRecord::Base
     end
     return hash_array
   end
-
 #------------------------------------------------------------------------------------------
 
   #take in a urlstring, parse page with nokogiri, delete first row(headers), return the array of arrays
@@ -62,7 +61,6 @@ class Station < ActiveRecord::Base
     data.delete_at 0
     return data
   end
-
 #-------------------------------------------------------------------------------------------
 
   #loop through array of arrays ('data') made in the 'parse_forecast', create an array of hashes
@@ -71,7 +69,6 @@ class Station < ActiveRecord::Base
     :dpt => row[6], :cld => row[7], :wdr => row[8], :wsp => row[9]}}
     return hash
   end
-
 #--------------------------------------------------------------------------------------------
 
   #accept the hash array full of forecast data, pull out desired variable, format for highcharts grapher
@@ -80,7 +77,6 @@ class Station < ActiveRecord::Base
       [row[:ftime].to_datetime.to_i*1000, row[wxvar.to_sym].to_f]
     end
   end
-
 #---------------------------------------------------------------------------------------------
 
   #call fetch_mos function and blend the data together. if we look at a series of forecast
@@ -91,15 +87,14 @@ class Station < ActiveRecord::Base
   #average out the data. Also we will destroy some of the duplicate forecast times so that we have
   #a unique datetime stamp for each datapoint.
   def blend_forecast(model,timestring,field)
-    #call self.fetch_mos to build array of hashes, than sort that by :ftime
+    #call self.fetch_mos to build array of hashes, sort that by :ftime, process data, spit it out
     sorted_array = self.fetch_mos(model,timestring).sort_by {|hash| hash[:ftime]}
     final_array = self.process_sorted_mos_array(sorted_array,field)
   end
-
 #-----------------------------------------------------------------------------------------------
 
   #loop through array, find duplicates, average values, delete extraneous records
-  #loop has to run twice to remove all duplicates!
+  #loop has to run twice to remove all duplicates! 's' is shorthand for sorted_array (to save space)
   def process_sorted_mos_array(s,field)
     f = field.to_sym
     2.times do |x|
@@ -114,49 +109,79 @@ class Station < ActiveRecord::Base
     end
     return s
   end
+#----------------------------------------------------------------------------------------------------
 
-  def prep_mos_windrose(model,timestring)
-    winddir_hash = self.blend_forecast(model,timestring,"wdr")
-    sorted_data = Station.sort_wind_data(winddir_hash)
+  #will fetch mos wind data for the past few days (excluding today)
+  #this data will be compared to the observed data over the same timeframe
+  def make_forecasted_windrose(model,timestring)
+    blended_hash_array = self.blend_forecast(model,timestring,"wsp")
+    previous_wind_fcst = Station.get_past_wind_forecast(blended_hash_array).compact!
+    sorted_data = Station.sort_wind_data(previous_wind_fcst)
+    view_data = Station.process_windrose_data_from(sorted_data)
   end
+#--------------------------------------------------------------------------------------------------------
 
-  #input the hash_array with the forecast data, pull out the wdr data, sort it into bins [N,NNE,NE,ENE,E...NNW]
+  #input the hash_array with the forecast data, pull out the wdr data, sort it into bins [N,NE,E,SE,...,W,NW]
   def self.sort_wind_data(hash)
     output_array = Array.new
-    n = hash.map {|row| if row[:wdr].to_f.between?(0,11.25)&&row[:wdr].to_f.between?(348.75,360) then [{row[:wdr]=>row[:wsp]}]end}
-    nne = (hash.map {|row| if row[:wdr].to_f.between?(11.25,33.75) then row[:wsp]end})
-    ne = (hash.map {|row| if row[:wdr].to_f.between?(33.75,56.25) then row[:wsp]end})
-    ene = (hash.map {|row| if row[:wdr].to_f.between?(56.25,78.75) then row[:wsp]end})
-    e = (hash.map {|row| if row[:wdr].to_f.between?(78.75,101.25) then row[:wsp]end})
-    ese = (hash.map {|row| if row[:wdr].to_f.between?(101.25,123.75) then row[:wsp]end})
-    se = (hash.map {|row| if row[:wdr].to_f.between?(123.75,146.25) then row[:wsp]end})
-    sse = (hash.map {|row| if row[:wdr].to_f.between?(146.25,168.75) then row[:wsp]end})
-    s = (hash.map {|row| if row[:wdr].to_f.between?(168.75,191.25) then row[:wsp]end})
-    ssw = (hash.map {|row| if row[:wdr].to_f.between?(191.25,213.75) then row[:wsp]end})
-    sw = (hash.map {|row| if row[:wdr].to_f.between?(213.75,236.25) then row[:wsp]end})
-    wsw = (hash.map {|row| if row[:wdr].to_f.between?(236.25,258.75) then row[:wsp]end})
-    w = (hash.map {|row| if row[:wdr].to_f.between?(258.75,281.25) then row[:wsp]end})
-    wnw = (hash.map {|row| if row[:wdr].to_f.between?(281.25,303.75) then row[:wsp]end})
-    nw = (hash.map {|row| if row[:wdr].to_f.between?(303.75,326.25) then row[:wsp]end})
-    nnw = (hash.map {|row| if row[:wdr].to_f.between?(326.25,348.75) then row[:wsp]end})
-    output_array.push(n,nne,ne,ene,e,ese,se,sse,s,ssw,sw,wsw,w,wnw,nw,nnw)
+    n = hash.map {|row| if row[:wdr].to_f.between?(0,22.49)&&row[:wdr].to_f.between?(337.5,360) then row[:wsp].to_f end}
+    ne = (hash.map {|row| if row[:wdr].to_f.between?(22.5,67.49) then row[:wsp].to_f end})
+    e = (hash.map {|row| if row[:wdr].to_f.between?(67.5,112.49) then row[:wsp].to_f end})
+    se = (hash.map {|row| if row[:wdr].to_f.between?(112.5,157.49) then row[:wsp].to_f end})
+    s = (hash.map {|row| if row[:wdr].to_f.between?(157.5,202.49) then row[:wsp].to_f end})
+    sw = (hash.map {|row| if row[:wdr].to_f.between?(202.5,247.49) then row[:wsp].to_f end})
+    w = (hash.map {|row| if row[:wdr].to_f.between?(247.5,292.49) then row[:wsp].to_f end})
+    nw = (hash.map {|row| if row[:wdr].to_f.between?(292.5,337.49) then row[:wsp].to_f end})
+    output_array.push(n,ne,e,se,s,sw,w,nw)
     output_array.map! {|row| row.compact}
   end
+#----------------------------------------------------------------------------------------------------
 
-
-  def make_windrose(wsp_hash)
-
+  #input the sorted wind_data and the data for each bin ('N','NE',...) into the output array
+  def self.process_windrose_data_from(wsp_hash)
+    #each bin is a predefined set of angles found in the 'sort_wind_data' function right above this
+    #the output will be an array, each slot filled with the average windspeed for that bin
+    output = Array.new
+    #loop over each bin. find average of all elements in each row (sometimes there are zero!)
+    0.upto(7) do |bin|
+      sum = 0
+      if wsp_hash[bin].length == 0
+        avg = 0
+      else
+        wsp_hash[bin].each {|s| sum = sum + s}
+        avg = (sum/wsp_hash[bin].length).round(2)
+      end
+      output.push(avg)
+    end
+    return output
   end
-###########################################################################################
-################### END FORECAST PROCESSING FUNCTIONS #######################################
-###########################################################################################
+#--------------------------------------------------------------------------------------------------
 
-#----------------------------------------------------------------------------------------------
+  #for the windrose I will display previous forecasts, so we can overlay the obs on them
+  #input here is the array of hashes made from the 'blend_forecast' method
+  #output is an array of hashes like this... [{:wdr=>'220',:wsp=>'19'},......]
+  def self.get_past_wind_forecast(blended_data)
+    output = blended_data.map do |row|
+      unless row[:runtime].to_date == Date.today.to_date
+        {:wdr => row[:wdr], :wsp => row[:wsp]}
+      end
+    end
+  end
+#------------------------------------------------------------------------------------------------------
 
-#############################################################################################
-################### OBSERVATION PROCESSING FUNCTIONS ##########################################
-#############################################################################################
 
+     ###########################################################################################
+     ################### END FORECAST PROCESSING FUNCTIONS #######################################
+     ###########################################################################################
+
+#--------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------
+
+     #############################################################################################
+     ################### OBSERVATION PROCESSING FUNCTIONS ##########################################
+     #############################################################################################
+
+#-------------------------------------------------------------------------------------------------------
   def fetch_past_obs()
     begin_day, begin_month, begin_year, end_day, end_month, end_year = Station.get_date_info
     url =  "http://mesonet.agron.iastate.edu/cgi-bin/request/getData.py?station=#{self.name[1..3]}& \
@@ -184,7 +209,6 @@ class Station < ActiveRecord::Base
     data = Nokogiri.HTML(open(url)).text.split("\n").to_a.map {|row| row.split(',')}
     #delete headers
     4.times {|i| data.delete_at(0)}
-    #sift
     return data
   end
 
@@ -200,7 +224,18 @@ class Station < ActiveRecord::Base
     end
   end
 
+  def make_observed_windrose()
+    obs = self.fetch_past_obs
+    hash = Station.make_obs_windrose_hash(obs)
+    sorted_data = Station.sort_wind_data(hash)
+    view_data = Station.process_windrose_data_from(sorted_data)
+  end
 
+  def self.make_obs_windrose_hash(obs)
+    output = obs.map do |row|
+      {:wdr => row[:wdr], :wsp => row[:wsp]}
+    end
+  end
 
   #get data from obs for past 6 hrs
   def get_obs_from_past_6hrs(hash,field)
