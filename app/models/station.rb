@@ -35,7 +35,7 @@ class Station < ActiveRecord::Base
 #------------------------------------------------------------------------------------------
 
 ########################################################################################
-################ FORECAST PROCESSING FUNCTIONS ########################################
+################ FORECAST TIME SERIES FUNCTIONS ########################################
 ########################################################################################
 
   #get forecast data and return it as an array of hashes
@@ -121,6 +121,124 @@ class Station < ActiveRecord::Base
   end
 #--------------------------------------------------------------------------------------------------------
 
+#--------------------------------------------------------------------------------------------------
+
+  #for the windrose I will display previous forecasts, so we can overlay the obs on them
+  #input here is the array of hashes made from the 'blend_forecast' method
+  #output is an array of hashes like this... [{:wdr=>'220',:wsp=>'19'},......]
+  def self.get_past_wind_forecast(blended_data)
+    output = blended_data.map do |row|
+      unless row[:runtime].to_date == Date.today.to_date
+        {:wdr => row[:wdr], :wsp => row[:wsp]}
+      end
+    end
+  end
+#------------------------------------------------------------------------------------------------------
+
+
+     ###########################################################################################
+     ################### END FORECAST TIME SERIES FUNCTIONS #######################################
+     ###########################################################################################
+
+#--------------------------------------------------------------------------------------------------------
+
+
+
+#--------------------------------------------------------------------------------------------------------
+
+     #############################################################################################
+     ################### OBSERVATION TIME SERIES FUNCTIONS ##########################################
+     #############################################################################################
+
+#-------------------------------------------------------------------------------------------------------
+
+  #grabs sfc obs, calls self.parse_obs and self.make_obs_hash
+  def fetch_past_obs()
+    begin_day, begin_month, begin_year, end_day, end_month, end_year = Station.get_date_info
+    url =  "http://mesonet.agron.iastate.edu/cgi-bin/request/getData.py?station=#{self.name[1..3]}& \
+    data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=p01i&data=mslp&&data=skyc1& \
+    year1=#{begin_year}&year2=#{end_year}&month1=#{begin_month}&month2=#{end_month}&day1=#{begin_day}&\
+    day2=#{end_day}&tz=GMT&format=comma&latlon=no".gsub!(/\s+/,"")
+    obs = Station.parse_obs(url)
+    ob_hash = Station.make_obs_hash(obs)
+  end
+#----------------------------------------------------------------------------------------------------------
+
+  #do some date processing to get values which are input into the query string in 'fetch_past_obs'
+  def self.get_date_info
+    begin_date = Date.today - 4.days
+    begin_year = begin_date.year.to_s
+    begin_month = begin_date.month.to_s
+    begin_day = begin_date.day.to_s
+    end_date = Date.today
+    end_year = end_date.year.to_s
+    end_month = end_date.month.to_s
+    end_day = end_date.day.to_s
+    return begin_day, begin_month, begin_year, end_day, end_month, end_year
+  end
+
+#-----------------------------------------------------------------------------------------------------------
+
+  #connect to webpage with data, split it into arrays, map to new variable, delete headerlines
+  def self.parse_obs(url)
+    require 'open-uri'
+    data = Nokogiri.HTML(open(url)).text.split("\n").to_a.map {|row| row.split(',')}
+    4.times {|i| data.delete_at(0)}
+    return data
+  end
+#------------------------------------------------------------------------------------------------------------
+
+  #input the obs_data from 'self.parse_obs' function. output a hash array
+  def self.make_obs_hash(data)
+    hash = []
+    data.each {|row| hash << {:vtime => row[1], :tmp => row[2], :dpt => row[3],:wdr => row[5], :wsp => row[6] }}
+    return hash
+  end
+#----------------------------------------------------------------------------------------------------------
+
+  #input the desired field and the obs_hash defined above in 'self.make_obs_hash'
+  def self.prep_obs_array(obs_hash,field)
+    view_data = obs_hash.map do |row|
+      [row[:vtime].to_datetime.to_i*1000, row[field.to_sym].to_f]
+    end
+  end
+#------------------------------------------------------------------------------------------------------------
+
+  #fetch_obs, make the hash of wind data, sort it into bins (N,NE,E...), then loop over each bin and
+  #compute the average value of all wind data for that bin
+  def make_observed_windrose()
+    obs = self.fetch_past_obs
+    hash = Station.make_obs_windrose_hash(obs)
+    sorted_data = Station.sort_wind_data(hash)
+    view_data = Station.process_windrose_data_from(sorted_data)
+  end
+#-------------------------------------------------------------------------------------------------------
+
+  #create a hash_array containing wdr and wsp, send this output into the sort_wind_data function
+  def self.make_obs_windrose_hash(obs)
+    output = obs.map do |row|
+      {:wdr => row[:wdr], :wsp => row[:wsp]}
+    end
+  end
+#--------------------------------------------------------------------------------------------------------
+
+  #get data from obs for past 6 hrs
+  #def get_obs_from_past_6hrs(hash,field)
+  #  six_hr_threshold = (Time.now - 6.hours).datetime.to_i
+  #  output_array = Array.new
+  #  hash.each do |row|
+  #    if row[:ftime.to_datetime.to_i]>six_hr_threshold
+  #      output_array.push(row)
+  #    end
+  #  end
+  #end
+
+#--------------------------------------------------------------------------------------------------------
+     #############################################################################################
+     ################### WINDROSE PROCESSING FUNCTIONS ##########################################
+     #############################################################################################
+#--------------------------------------------------------------------------------------------------------
+
   #input the hash_array with the forecast data, pull out the wdr data, sort it into bins [N,NE,E,SE,...,W,NW]
   def self.sort_wind_data(hash)
     output_array = Array.new
@@ -155,106 +273,7 @@ class Station < ActiveRecord::Base
     end
     return output
   end
-#--------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------
 
-  #for the windrose I will display previous forecasts, so we can overlay the obs on them
-  #input here is the array of hashes made from the 'blend_forecast' method
-  #output is an array of hashes like this... [{:wdr=>'220',:wsp=>'19'},......]
-  def self.get_past_wind_forecast(blended_data)
-    output = blended_data.map do |row|
-      unless row[:runtime].to_date == Date.today.to_date
-        {:wdr => row[:wdr], :wsp => row[:wsp]}
-      end
-    end
-  end
-#------------------------------------------------------------------------------------------------------
-
-
-     ###########################################################################################
-     ################### END FORECAST PROCESSING FUNCTIONS #######################################
-     ###########################################################################################
-
-#--------------------------------------------------------------------------------------------------------
-#--------------------------------------------------------------------------------------------------------
-
-     #############################################################################################
-     ################### OBSERVATION PROCESSING FUNCTIONS ##########################################
-     #############################################################################################
-
-#-------------------------------------------------------------------------------------------------------
-  def fetch_past_obs()
-    begin_day, begin_month, begin_year, end_day, end_month, end_year = Station.get_date_info
-    url =  "http://mesonet.agron.iastate.edu/cgi-bin/request/getData.py?station=#{self.name[1..3]}& \
-    data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=p01i&data=mslp&&data=skyc1& \
-    year1=#{begin_year}&year2=#{end_year}&month1=#{begin_month}&month2=#{end_month}&day1=#{begin_day}&\
-    day2=#{end_day}&tz=GMT&format=comma&latlon=no".gsub!(/\s+/,"")
-    obs = Station.parse_obs(url)
-    ob_hash = Station.make_obs_hash(obs)
-  end
-
-  def self.get_date_info
-    begin_date = Date.today - 4.days
-    begin_year = begin_date.year.to_s
-    begin_month = begin_date.month.to_s
-    begin_day = begin_date.day.to_s
-    end_date = Date.today
-    end_year = end_date.year.to_s
-    end_month = end_date.month.to_s
-    end_day = end_date.day.to_s
-    return begin_day, begin_month, begin_year, end_day, end_month, end_year
-  end
-
-  def self.parse_obs(url)
-    require 'open-uri'
-    data = Nokogiri.HTML(open(url)).text.split("\n").to_a.map {|row| row.split(',')}
-    #delete headers
-    4.times {|i| data.delete_at(0)}
-    return data
-  end
-
-  def self.make_obs_hash(data)
-    hash = []
-    data.each {|row| hash << {:vtime => row[1], :tmp => row[2], :dpt => row[3],:wdr => row[5], :wsp => row[6] }}
-    return hash
-  end
-
-  def self.prep_obs_array(obs,field)
-    view_data = obs.map do |row|
-      [row[:vtime].to_datetime.to_i*1000, row[field.to_sym].to_f]
-    end
-  end
-
-  def make_observed_windrose()
-    obs = self.fetch_past_obs
-    hash = Station.make_obs_windrose_hash(obs)
-    sorted_data = Station.sort_wind_data(hash)
-    view_data = Station.process_windrose_data_from(sorted_data)
-  end
-
-  def self.make_obs_windrose_hash(obs)
-    output = obs.map do |row|
-      {:wdr => row[:wdr], :wsp => row[:wsp]}
-    end
-  end
-
-  #get data from obs for past 6 hrs
-  def get_obs_from_past_6hrs(hash,field)
-    six_hr_threshold = (Time.now - 6.hours).datetime.to_i
-    output_array = Array.new
-    hash.each do |row|
-      if row[:ftime.to_datetime.to_i]>six_hr_threshold
-        output_array.push(row)
-      end
-    end
-  end
-
-
-  ########################STATISTICAL STUFF ############################################
-
-  def verify_last_6hrs_from(forecast,obs,field)
-
-  end
-
-
-end
+end #endclass
 

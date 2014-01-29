@@ -53,13 +53,10 @@ class StationsController < ApplicationController
       @nam12Zwind = @station.make_forecasted_windrose("NAM","12:00")
       @observed_wind = @station.make_observed_windrose()
 
-      @titlestring = "#{@station.longname}-#{@station.state} #{Date.today.to_s} MOS Verification Forecast (UTC time)"
+      @titlestring = "#{@station.longname}-#{@station.state} #{Date.today.to_s} (all times UTC)"
     end
   end
 
-  def windrose
-    @message = "did it mom"
-  end
 
   def add_stations_from(state)
      stations = Station.where(:state=>state).map do |s|
