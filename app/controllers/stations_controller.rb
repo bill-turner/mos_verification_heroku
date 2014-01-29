@@ -44,14 +44,14 @@ class StationsController < ApplicationController
       elsif params[:userfield]=="wdr" then @var="Wind Direction [deg]"
       elsif params[:userfield]=="wsp" then @var="Wind Speed [knots]"
       end
-
-      @gfs0Zwind = @station.make_forecasted_windrose("GFS","00:00")
-      @gfs06Zwind = @station.make_forecasted_windrose("GFS","06:00")
-      @gfs12Zwind = @station.make_forecasted_windrose("GFS","12:00")
-      @gfs18Zwind = @station.make_forecasted_windrose("GFS","18:00")
-      @nam0Zwind = @station.make_forecasted_windrose("NAM","00:00")
-      @nam12Zwind = @station.make_forecasted_windrose("NAM","12:00")
-      @observed_wind = @station.make_observed_windrose()
+      #
+      #@gfs0Zwind = @station.make_forecasted_windrose("GFS","00:00")
+      #@gfs06Zwind = @station.make_forecasted_windrose("GFS","06:00")
+      #@gfs12Zwind = @station.make_forecasted_windrose("GFS","12:00")
+      #@gfs18Zwind = @station.make_forecasted_windrose("GFS","18:00")
+      #@nam0Zwind = @station.make_forecasted_windrose("NAM","00:00")
+      #@nam12Zwind = @station.make_forecasted_windrose("NAM","12:00")
+      #@observed_wind = @station.make_observed_windrose()
 
       @titlestring = "#{@station.longname}-#{@station.state} #{Date.today.to_s} (all times UTC)"
     end
