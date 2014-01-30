@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/station.rb" afterPath="$PROJECT_DIR$/app/models/station.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewcode.txt" afterPath="$PROJECT_DIR$/viewcode.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/windrose.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/windrose.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -22,7 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mos_verification@db_migrate__mos_verification.coverage" NAME="db:migrate: mos_verification Coverage Results" MODIFIED="1390690570779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_drop__mos_verification.coverage" NAME="db:drop: mos_verification Coverage Results" MODIFIED="1390672423879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
-    <SUITE FILE_PATH="coverage/mos_verification@Rails_console__mos_verification.coverage" NAME="Rails console: mos_verification Coverage Results" MODIFIED="1391043147147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
+    <SUITE FILE_PATH="coverage/mos_verification@Rails_console__mos_verification.coverage" NAME="Rails console: mos_verification Coverage Results" MODIFIED="1391043982333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@Development__mos_verification.coverage" NAME="Development: mos_verification Coverage Results" MODIFIED="1391037043522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_create__mos_verification.coverage" NAME="db:create: mos_verification Coverage Results" MODIFIED="1390672441187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
   </component>
@@ -38,19 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="station.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="station.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="264" column="10" selection-start="12845" selection-end="12845" vertical-scroll-proportion="0.0" vertical-offset="3726" max-vertical-offset="4158">
+            <state line="155" column="0" selection-start="7464" selection-end="7464" vertical-scroll-proportion="0.94736844" vertical-offset="1782" max-vertical-offset="4158">
               <folding>
-                <element signature="e#2607#2786#0" expanded="false" />
-                <element signature="e#2980#3242#0" expanded="false" />
-                <element signature="e#4306#4609#0" expanded="false" />
-                <element signature="e#4893#5230#0" expanded="false" />
-                <element signature="e#7063#7437#0" expanded="false" />
-                <element signature="e#7646#7852#0" expanded="false" />
-                <element signature="e#8040#8235#0" expanded="false" />
-                <element signature="e#8429#8586#0" expanded="false" />
+                <element signature="e#2632#2811#0" expanded="false" />
+                <element signature="e#3005#3267#0" expanded="false" />
+                <element signature="e#4331#4634#0" expanded="false" />
+                <element signature="e#4918#5255#0" expanded="false" />
+                <element signature="e#7088#7462#0" expanded="false" />
+                <element signature="e#7671#7877#0" expanded="false" />
+                <element signature="e#8065#8260#0" expanded="false" />
+                <element signature="e#8454#8611#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -65,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="stations.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.4311377" vertical-offset="234" max-vertical-offset="810">
+            <state line="21" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="-7.185185" vertical-offset="184" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -134,10 +129,10 @@
         <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/app/views/stations/windrose.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/station.rb" />
         <option value="$PROJECT_DIR$/viewcode.txt" />
         <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
+        <option value="$PROJECT_DIR$/app/models/station.rb" />
       </list>
     </option>
   </component>
@@ -687,7 +682,11 @@
       <created>1391026436129</created>
       <updated>1391026436129</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="got rid of historical forecast/obs data. Now displaying data from todays model runs only">
+      <created>1391043687606</created>
+      <updated>1391043687606</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -733,7 +732,8 @@
     <MESSAGE value="windrose test3&#10;" />
     <MESSAGE value="changed header&#10;" />
     <MESSAGE value="ignoring windstuff in controller&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignoring windstuff in controller&#10;" />
+    <MESSAGE value="got rid of historical forecast/obs data. Now displaying data from todays model runs only" />
+    <option name="LAST_COMMIT_MESSAGE" value="got rid of historical forecast/obs data. Now displaying data from todays model runs only" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -782,14 +782,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="39" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4158">
           <folding>
-            <element signature="e#2607#2786#0" expanded="false" />
-            <element signature="e#2980#3242#0" expanded="false" />
-            <element signature="e#4306#4609#0" expanded="false" />
-            <element signature="e#4893#5230#0" expanded="false" />
-            <element signature="e#7063#7437#0" expanded="false" />
-            <element signature="e#7646#7852#0" expanded="false" />
-            <element signature="e#8040#8235#0" expanded="false" />
-            <element signature="e#8429#8586#0" expanded="false" />
+            <element signature="e#2632#2811#0" expanded="false" />
+            <element signature="e#3005#3267#0" expanded="false" />
+            <element signature="e#4331#4634#0" expanded="false" />
+            <element signature="e#4918#5255#0" expanded="false" />
+            <element signature="e#7088#7462#0" expanded="false" />
+            <element signature="e#7671#7877#0" expanded="false" />
+            <element signature="e#8065#8260#0" expanded="false" />
+            <element signature="e#8454#8611#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -859,14 +859,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="217" column="0" selection-start="9901" selection-end="9901" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4122">
           <folding>
-            <element signature="e#2607#2786#0" expanded="false" />
-            <element signature="e#2980#3242#0" expanded="false" />
-            <element signature="e#4306#4609#0" expanded="false" />
-            <element signature="e#4893#5230#0" expanded="false" />
-            <element signature="e#7063#7437#0" expanded="false" />
-            <element signature="e#7646#7852#0" expanded="false" />
-            <element signature="e#8040#8235#0" expanded="false" />
-            <element signature="e#8429#8586#0" expanded="false" />
+            <element signature="e#2632#2811#0" expanded="false" />
+            <element signature="e#3005#3267#0" expanded="false" />
+            <element signature="e#4331#4634#0" expanded="false" />
+            <element signature="e#4918#5255#0" expanded="false" />
+            <element signature="e#7088#7462#0" expanded="false" />
+            <element signature="e#7671#7877#0" expanded="false" />
+            <element signature="e#8065#8260#0" expanded="false" />
+            <element signature="e#8454#8611#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -927,14 +927,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="3798">
           <folding>
-            <element signature="e#2607#2786#0" expanded="false" />
-            <element signature="e#2980#3242#0" expanded="false" />
-            <element signature="e#4306#4609#0" expanded="false" />
-            <element signature="e#4893#5230#0" expanded="false" />
-            <element signature="e#7063#7437#0" expanded="false" />
-            <element signature="e#7646#7852#0" expanded="false" />
-            <element signature="e#8040#8235#0" expanded="false" />
-            <element signature="e#8429#8586#0" expanded="false" />
+            <element signature="e#2632#2811#0" expanded="false" />
+            <element signature="e#3005#3267#0" expanded="false" />
+            <element signature="e#4331#4634#0" expanded="false" />
+            <element signature="e#4918#5255#0" expanded="false" />
+            <element signature="e#7088#7462#0" expanded="false" />
+            <element signature="e#7671#7877#0" expanded="false" />
+            <element signature="e#8065#8260#0" expanded="false" />
+            <element signature="e#8454#8611#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1064,22 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="10" selection-start="12845" selection-end="12845" vertical-scroll-proportion="0.0" vertical-offset="3726" max-vertical-offset="4158">
-          <folding>
-            <element signature="e#2607#2786#0" expanded="false" />
-            <element signature="e#2980#3242#0" expanded="false" />
-            <element signature="e#4306#4609#0" expanded="false" />
-            <element signature="e#4893#5230#0" expanded="false" />
-            <element signature="e#7063#7437#0" expanded="false" />
-            <element signature="e#7646#7852#0" expanded="false" />
-            <element signature="e#8040#8235#0" expanded="false" />
-            <element signature="e#8429#8586#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewcode.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="125" column="17" selection-start="3599" selection-end="3599" vertical-scroll-proportion="-4.08" vertical-offset="2148" max-vertical-offset="3024">
@@ -1110,8 +1094,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.4311377" vertical-offset="234" max-vertical-offset="810">
+        <state line="21" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="-7.185185" vertical-offset="184" max-vertical-offset="810">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="0" selection-start="7464" selection-end="7464" vertical-scroll-proportion="0.94736844" vertical-offset="1782" max-vertical-offset="4158">
+          <folding>
+            <element signature="e#2632#2811#0" expanded="false" />
+            <element signature="e#3005#3267#0" expanded="false" />
+            <element signature="e#4331#4634#0" expanded="false" />
+            <element signature="e#4918#5255#0" expanded="false" />
+            <element signature="e#7088#7462#0" expanded="false" />
+            <element signature="e#7671#7877#0" expanded="false" />
+            <element signature="e#8065#8260#0" expanded="false" />
+            <element signature="e#8454#8611#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

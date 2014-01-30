@@ -41,7 +41,7 @@ class Station < ActiveRecord::Base
   #get forecast data and return it as an array of hashes
   #hourstring is something like '06:00', '12:00',  model is 'GFS' or 'NAM'
   def fetch_todays_mos(model,hourstring)
-    date = Date.today.to_s
+    date = Time.parse(Date.today.to_s).to_date.to_s
     hash_array = Array.new
     url = "http://mesonet.agron.iastate.edu/mos/csv.php?station=#{self.name}&  \
       runtime=#{date}%20#{hourstring}&model=#{model}".gsub(" ","")
