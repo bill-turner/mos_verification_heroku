@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -43,13 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stations_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="25" selection-start="3098" selection-end="3098" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1296">
-              <folding>
-                <marker date="1391056786475" expanded="true" signature="1040:1136" placeholder="#..." />
-              </folding>
+            <state line="52" column="68" selection-start="2901" selection-end="2901" vertical-scroll-proportion="0.6599099" vertical-offset="643" max-vertical-offset="1296">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.84653467" vertical-offset="216" max-vertical-offset="3708">
+            <state line="31" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="-12.666667" vertical-offset="216" max-vertical-offset="3708">
               <folding>
                 <marker date="1391056786465" expanded="true" signature="2892:2913" placeholder="..." />
                 <marker date="1391056786465" expanded="true" signature="2963:2980" placeholder="..." />
@@ -125,8 +121,8 @@
         <option value="$PROJECT_DIR$/viewcode.txt" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
         <option value="$PROJECT_DIR$/app/models/station.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       </list>
     </option>
   </component>
@@ -712,7 +708,11 @@
       <created>1391056574159</created>
       <updated>1391056574159</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="putting timestamp into view">
+      <created>1391056804423</created>
+      <updated>1391056804423</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -767,7 +767,8 @@
     <MESSAGE value="datething part ten" />
     <MESSAGE value="datething take 2, from the top, again&#10;" />
     <MESSAGE value="removed windrose, added winddir, wsp back to time series. Still datething from the top though, again. from the top" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed windrose, added winddir, wsp back to time series. Still datething from the top though, again. from the top" />
+    <MESSAGE value="putting timestamp into view" />
+    <option name="LAST_COMMIT_MESSAGE" value="putting timestamp into view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -776,9 +777,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="27" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1260">
-          <folding>
-            <marker date="1391056786475" expanded="true" signature="1040:1136" placeholder="#..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -824,9 +823,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="27" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1260">
-          <folding>
-            <marker date="1391056786475" expanded="true" signature="1040:1136" placeholder="#..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -894,9 +891,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1080">
-          <folding>
-            <marker date="1391056786475" expanded="true" signature="1040:1136" placeholder="#..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -955,9 +950,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="0" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0" vertical-offset="954" max-vertical-offset="1080">
-          <folding>
-            <marker date="1391056786475" expanded="true" signature="1040:1136" placeholder="#..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,9 +1000,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="11" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180">
-          <folding>
-            <marker date="1391056786475" expanded="true" signature="1040:1136" placeholder="#..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,23 +1096,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="25" selection-start="3098" selection-end="3098" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1296">
-          <folding>
-            <marker date="1391056786475" expanded="true" signature="1040:1136" placeholder="#..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.84653467" vertical-offset="216" max-vertical-offset="3708">
+        <state line="31" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="-12.666667" vertical-offset="216" max-vertical-offset="3708">
           <folding>
             <marker date="1391056786465" expanded="true" signature="2892:2913" placeholder="..." />
             <marker date="1391056786465" expanded="true" signature="2963:2980" placeholder="..." />
             <marker date="1391056786465" expanded="true" signature="5042:5062" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="68" selection-start="2901" selection-end="2901" vertical-scroll-proportion="0.6599099" vertical-offset="643" max-vertical-offset="1296">
+          <folding />
         </state>
       </provider>
     </entry>
