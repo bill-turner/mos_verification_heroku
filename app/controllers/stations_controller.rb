@@ -52,8 +52,8 @@ class StationsController < ApplicationController
 
       ###heroku keeps giving me the datestring in UTC time, so this will account for it
       date = @station.get_model_initialization_date
-      @titlestring = "#Today's MOS Forecasts for #{@station.longname}-#{@station.state} (all times UTC)"
-      @timenow = Time.now
+      @titlestring = "Today's MOS Forecasts for #{@station.longname}-#{@station.state} (all times UTC)"
+
     end
   end
 
