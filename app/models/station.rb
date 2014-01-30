@@ -42,12 +42,19 @@ class Station < ActiveRecord::Base
   #hourstring is something like '06:00', '12:00',  model is 'GFS' or 'NAM'
   def fetch_todays_mos(model,hourstring)
     date = Date.today.to_s
-    other_date = Time.now.to_date
     hash_array = Array.new
     url = "http://mesonet.agron.iastate.edu/mos/csv.php?station=#{self.name}&  \
-      runtime=#{other_date}%20#{hourstring}&model=#{model}".gsub(" ","")
+      runtime=#{date}%20#{hourstring}&model=#{model}".gsub(" ","")
     forecast = Station.parse_forecast(url)
     forecast_hash = Station.make_mos_hash(forecast)
+    if forecast_hash.empty?
+      date = (Date.today - 1.day).to_s
+      url = "http://mesonet.agron.iastate.edu/mos/csv.php?station=#{self.name}&  \
+        runtime=#{date}%20#{hourstring}&model=#{model}".gsub(" ","")
+      forecast = Station.parse_forecast(url)
+      forecast_hash = Station.make_mos_hash(forecast)
+    end
+    return forecast_hash
   end
 #------------------------------------------------------------------------------------------
 
