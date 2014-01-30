@@ -67,10 +67,12 @@ $(document).ready(function(){
         tooltip: {
             shared: true,
             useHTML: true,
+            xDateFormat: '%Y-%m-%d %H:%M',
             headerFormat: '<small>{point.key}</small><table>',
             pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
             '<td style="text-align: right"><b>{point.y}</b></td></tr>',
             footerFormat: '</table>',
+
             valueDecimals: 1
         },
         xAxis: {

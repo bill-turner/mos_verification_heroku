@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
+    <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="fixed tooltip">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/station.rb" afterPath="$PROJECT_DIR$/app/models/station.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -54,22 +52,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stations.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="11" selection-start="777" selection-end="777" vertical-scroll-proportion="-18.814816" vertical-offset="212" max-vertical-offset="864">
+            <state line="41" column="1" selection-start="786" selection-end="786" vertical-scroll-proportion="0.88743883" vertical-offset="194" max-vertical-offset="846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="17" selection-start="2548" selection-end="2548" vertical-scroll-proportion="0.8798701" vertical-offset="376" max-vertical-offset="2484">
+            <state line="69" column="40" selection-start="2989" selection-end="2989" vertical-scroll-proportion="-14.074074" vertical-offset="862" max-vertical-offset="2520">
               <folding>
-                <marker date="1391059345239" expanded="true" signature="3053:3074" placeholder="..." />
-                <marker date="1391059345239" expanded="true" signature="3124:3141" placeholder="..." />
+                <marker date="1391060575959" expanded="true" signature="3096:3117" placeholder="..." />
+                <marker date="1391060575959" expanded="true" signature="3167:3184" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -101,7 +99,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="17" selection-start="3599" selection-end="3599" vertical-scroll-proportion="0.0" vertical-offset="2148" max-vertical-offset="3024">
+            <state line="23" column="35" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.24" vertical-offset="420" max-vertical-offset="3024">
               <folding />
             </state>
           </provider>
@@ -133,8 +131,8 @@
         <option value="$PROJECT_DIR$/viewcode.txt" />
         <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/station.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
         <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
       </list>
     </option>
   </component>
@@ -736,7 +734,11 @@
       <created>1391058635254</created>
       <updated>1391058635254</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added stats box, about to start making some stats">
+      <created>1391059372430</created>
+      <updated>1391059372430</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -745,7 +747,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110456556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3078056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3069719" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18051359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -753,7 +755,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30385014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30385014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32795155" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -795,7 +797,8 @@
     <MESSAGE value="removing date data from header" />
     <MESSAGE value="fixed graph title" />
     <MESSAGE value="clean,working" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean,working" />
+    <MESSAGE value="added stats box, about to start making some stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="added stats box, about to start making some stats" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -833,8 +836,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3366">
           <folding>
-            <marker date="1391059345239" expanded="true" signature="3053:3074" placeholder="..." />
-            <marker date="1391059345239" expanded="true" signature="3124:3141" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3096:3117" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3167:3184" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -878,8 +881,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3366">
           <folding>
-            <marker date="1391059345239" expanded="true" signature="3053:3074" placeholder="..." />
-            <marker date="1391059345239" expanded="true" signature="3124:3141" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3096:3117" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3167:3184" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -941,8 +944,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="23" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2358">
           <folding>
-            <marker date="1391059345239" expanded="true" signature="3053:3074" placeholder="..." />
-            <marker date="1391059345239" expanded="true" signature="3124:3141" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3096:3117" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3167:3184" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -999,8 +1002,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="64" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="2070">
           <folding>
-            <marker date="1391059345239" expanded="true" signature="3053:3074" placeholder="..." />
-            <marker date="1391059345239" expanded="true" signature="3124:3141" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3096:3117" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3167:3184" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1090,16 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewcode.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="17" selection-start="3599" selection-end="3599" vertical-scroll-proportion="0.0" vertical-offset="2148" max-vertical-offset="3024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
@@ -1121,20 +1114,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
+    <entry file="file://$PROJECT_DIR$/viewcode.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="11" selection-start="777" selection-end="777" vertical-scroll-proportion="-18.814816" vertical-offset="212" max-vertical-offset="864">
+        <state line="23" column="35" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.24" vertical-offset="420" max-vertical-offset="3024">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="17" selection-start="2548" selection-end="2548" vertical-scroll-proportion="0.8798701" vertical-offset="376" max-vertical-offset="2484">
+        <state line="69" column="40" selection-start="2989" selection-end="2989" vertical-scroll-proportion="-14.074074" vertical-offset="862" max-vertical-offset="2520">
           <folding>
-            <marker date="1391059345239" expanded="true" signature="3053:3074" placeholder="..." />
-            <marker date="1391059345239" expanded="true" signature="3124:3141" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3096:3117" placeholder="..." />
+            <marker date="1391060575959" expanded="true" signature="3167:3184" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="1" selection-start="786" selection-end="786" vertical-scroll-proportion="0.88743883" vertical-offset="194" max-vertical-offset="846">
+          <folding />
         </state>
       </provider>
     </entry>
