@@ -5,17 +5,15 @@
 <div id="container" style="min-width: 400px; max-width: 600px; height: 400px; margin: 0 auto"></div>
 <script>
 $(function () {
-
-	$('#container').highcharts({
-
+$('#container').highcharts({
 	    chart: {
 	        polar: true,
 	        type: 'line'
 	    },
-
+        colors: ['#0000CC','#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
 	    title: {
-	        text: 'Budget vs spending',
-	        x: -80
+	        text: 'Avg Wind Speed for the past 4 days [kts]',
+	        x: -30
 	    },
 
 	    pane: {
@@ -23,8 +21,8 @@ $(function () {
 	    },
 
 	    xAxis: {
-	        categories: ['North', 'Northeast', 'todd', 'East', 'Southeast',
-	        'where','is','toddd'],
+	        categories: ['North', 'Northeast', 'East', 'Southeast', 'South',
+	        'Southwest','West','Northwest'],
 	        tickmarkPlacement: 'between',
 	        lineWidth: 0
 	    },
@@ -36,27 +34,55 @@ $(function () {
 
 	    tooltip: {
 	    	shared: true,
-	        pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+	        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} kts</b><br/>'
 	    },
 
 	    legend: {
 	        align: 'right',
 	        verticalAlign: 'top',
-	        y: 70,
+	        y: 30,
 	        layout: 'vertical'
 	    },
 
 	    series: [{
-	        name: 'Forecast',
-	        data: [183000, 19000, 60000, 35000, 20000, 25000, 18000, 21000],
+
+	        name: 'SFC OBS',
+	        data: <%= @observed_wind %>,
 	        pointPlacement: 'on'
-	    }, {
-	        name: 'Observed',
-	        data: [50000, 39000, 42000, 31000, 20000, 22000,21000,15000],
+        },
+        {
+            name: 'GFS 0Z',
+            data: <%= @gfs0Zwind.to_json %>,
+            pointPlacement: 'on'
+        },
+
+	    {
+            name: 'GFS 06Z',
+            data: <%= @gfs06Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'GFS 12Z',
+	        data: <%= @gfs12Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'GFS 18Z',
+	        data: <%= @gfs18Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'NAM 0Z',
+	        data: <%= @nam0Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'NAM 12Z',
+	        data: <%= @nam12Zwind.to_json %>,
 	        pointPlacement: 'on'
 	    }]
-
 	});
+
 });
 </script>
 

@@ -47,7 +47,7 @@ $(document).ready(function(){
         colors: ['#0000CC','#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
         legend: {
             itemStyle: {
-                fontSize: '18px'
+                fontSize: '16px'
                 }
         },
         scrollbar: {
@@ -130,52 +130,39 @@ $(document).ready(function(){
 	        polar: true,
 	        type: 'line'
 	    },
-        colors: ['#0000CC','#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
+        colors: ['#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
 	    title: {
-	        text: 'Avg Wind Speed for the past 4 days [kts]',
+	        text: 'Forecasted Wind for the next 3 days [kts]',
 	        x: -30
 	    },
-
 	    pane: {
 	    	size: '80%'
 	    },
-
 	    xAxis: {
 	        categories: ['North', 'Northeast', 'East', 'Southeast', 'South',
 	        'Southwest','West','Northwest'],
 	        tickmarkPlacement: 'between',
 	        lineWidth: 0
 	    },
-
 	    yAxis: {
 	        lineWidth: 0,
 	        min: 0
 	    },
-
 	    tooltip: {
 	    	shared: true,
 	        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} kts</b><br/>'
 	    },
-
 	    legend: {
 	        align: 'right',
 	        verticalAlign: 'top',
 	        y: 30,
 	        layout: 'vertical'
 	    },
-
 	    series: [{
-
-	        name: 'SFC OBS',
-	        data: <%= @observed_wind %>,
-	        pointPlacement: 'on'
-        },
-        {
             name: 'GFS 0Z',
             data: <%= @gfs0Zwind.to_json %>,
             pointPlacement: 'on'
         },
-
 	    {
             name: 'GFS 06Z',
             data: <%= @gfs06Zwind.to_json %>,
@@ -201,8 +188,7 @@ $(document).ready(function(){
 	        data: <%= @nam12Zwind.to_json %>,
 	        pointPlacement: 'on'
 	    }]
-	});
-
+	})
 });//document ready function
 </script>
 

@@ -83,3 +83,81 @@
     });
 
 
+
+       $('#windrose').highcharts({
+	    chart: {
+	        polar: true,
+	        type: 'line'
+	    },
+        colors: ['#0000CC','#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
+	    title: {
+	        text: 'Forecasted Wind for the next 3 days [kts]',
+	        x: -30
+	    },
+
+	    pane: {
+	    	size: '80%'
+	    },
+
+	    xAxis: {
+	        categories: ['North', 'Northeast', 'East', 'Southeast', 'South',
+	        'Southwest','West','Northwest'],
+	        tickmarkPlacement: 'between',
+	        lineWidth: 0
+	    },
+
+	    yAxis: {
+	        lineWidth: 0,
+	        min: 0
+	    },
+
+	    tooltip: {
+	    	shared: true,
+	        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} kts</b><br/>'
+	    },
+
+	    legend: {
+	        align: 'right',
+	        verticalAlign: 'top',
+	        y: 30,
+	        layout: 'vertical'
+	    },
+
+	    series: [{
+
+	        name: 'SFC OBS',
+	        data: <%= @observed_wind %>,
+	        pointPlacement: 'on'
+        },
+        {
+            name: 'GFS 0Z',
+            data: <%= @gfs0Zwind.to_json %>,
+            pointPlacement: 'on'
+        },
+
+	    {
+            name: 'GFS 06Z',
+            data: <%= @gfs06Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'GFS 12Z',
+	        data: <%= @gfs12Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'GFS 18Z',
+	        data: <%= @gfs18Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'NAM 0Z',
+	        data: <%= @nam0Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    },
+	    {
+	        name: 'NAM 12Z',
+	        data: <%= @nam12Zwind.to_json %>,
+	        pointPlacement: 'on'
+	    }]
+	})

@@ -30,33 +30,29 @@ class StationsController < ApplicationController
       session[:userfield] = params[:userfield]
       @station = Station.find_by_name(@userstation.to_s)
 
-      @gfs0Z = Station.prep_mos_array(@station.blend_forecast("GFS", "00:00", @userfield),@userfield)
-      @gfs06Z = Station.prep_mos_array(@station.blend_forecast("GFS", "06:00", @userfield),@userfield)
-      @gfs12Z = Station.prep_mos_array(@station.blend_forecast("GFS", "12:00", @userfield),@userfield)
-      @gfs18Z = Station.prep_mos_array(@station.blend_forecast("GFS", "18:00", @userfield),@userfield)
-      @nam0Z = Station.prep_mos_array(@station.blend_forecast("NAM", "00:00", @userfield),@userfield)
-      @nam12Z = Station.prep_mos_array(@station.blend_forecast("NAM", "12:00", @userfield),@userfield)
+      @gfs0Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","00:00"),@userfield)
+      @gfs06Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","06:00"),@userfield)
+      @gfs12Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","12:00"),@userfield)
+      @gfs18Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","18:00"),@userfield)
+      @nam0Z = Station.prep_mos_array(@station.fetch_todays_mos("NAM","00:00"),@userfield)
+      @nam12Z = Station.prep_mos_array(@station.fetch_todays_mos("NAM","12:00"),@userfield)
 
-      @obs = Station.prep_obs_array(@station.fetch_past_obs(), @userfield)
+      @gfs0Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","00:00"))
+      @gfs06Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","06:00"))
+      @gfs12Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","12:00"))
+      @gfs18Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","18:00"))
+      @nam0Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("NAM","00:00"))
+      @nam12Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("NAM","12:00"))
 
       if params[:userfield]=="tmp" then @var="Temperature [F]"
       elsif params[:userfield]=="dpt" then @var="Dewpoint [F]"
       elsif params[:userfield]=="wdr" then @var="Wind Direction [deg]"
       elsif params[:userfield]=="wsp" then @var="Wind Speed [knots]"
       end
-      #
-      #@gfs0Zwind = @station.make_forecasted_windrose("GFS","00:00")
-      #@gfs06Zwind = @station.make_forecasted_windrose("GFS","06:00")
-      #@gfs12Zwind = @station.make_forecasted_windrose("GFS","12:00")
-      #@gfs18Zwind = @station.make_forecasted_windrose("GFS","18:00")
-      #@nam0Zwind = @station.make_forecasted_windrose("NAM","00:00")
-      #@nam12Zwind = @station.make_forecasted_windrose("NAM","12:00")
-      #@observed_wind = @station.make_observed_windrose()
+      @titlestring = "#{@station.longname}-#{@station.state} #{Date.today.to_s} MOS Forecasts (all times UTC)"
 
-      @titlestring = "#{@station.longname}-#{@station.state} #{Date.today.to_s} (all times UTC)"
     end
   end
-
 
   def add_stations_from(state)
      stations = Station.where(:state=>state).map do |s|
