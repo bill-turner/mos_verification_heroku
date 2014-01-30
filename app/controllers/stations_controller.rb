@@ -30,7 +30,7 @@ class StationsController < ApplicationController
       session[:userfield] = params[:userfield]
       @station = Station.find_by_name(@userstation.to_s)
 
-      @gfs0Z,date = Station.prep_mos_array(@station.fetch_todays_mos("GFS","00:00"),@userfield)
+      @gfs0Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","00:00"),@userfield)
       @gfs06Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","06:00"),@userfield)
       @gfs12Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","12:00"),@userfield)
       @gfs18Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","18:00"),@userfield)
@@ -49,7 +49,7 @@ class StationsController < ApplicationController
       elsif params[:userfield]=="wdr" then @var="Wind Direction [deg]"
       elsif params[:userfield]=="wsp" then @var="Wind Speed [knots]"
       end
-      @titlestring = "#{@station.longname}-#{@station.state} #{date} MOS Forecasts (all times UTC)"
+      @titlestring = "#{@station.longname}-#{@station.state} #{Date.today.to_s} MOS Forecasts (all times UTC)"
 
     end
   end

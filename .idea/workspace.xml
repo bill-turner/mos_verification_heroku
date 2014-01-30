@@ -35,16 +35,16 @@
       <file leaf-file-name="station.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="29" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="4302">
+            <state line="56" column="24" selection-start="2752" selection-end="2752" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="4302">
               <folding>
-                <element signature="e#2963#3142#0" expanded="false" />
-                <element signature="e#3336#3598#0" expanded="false" />
-                <element signature="e#4662#4965#0" expanded="false" />
-                <element signature="e#5249#5586#0" expanded="false" />
-                <element signature="e#7419#7793#0" expanded="false" />
-                <element signature="e#8002#8208#0" expanded="false" />
-                <element signature="e#8396#8591#0" expanded="false" />
-                <element signature="e#8785#8942#0" expanded="false" />
+                <element signature="e#2958#3137#0" expanded="false" />
+                <element signature="e#3331#3593#0" expanded="false" />
+                <element signature="e#4657#4960#0" expanded="false" />
+                <element signature="e#5244#5581#0" expanded="false" />
+                <element signature="e#7414#7788#0" expanded="false" />
+                <element signature="e#7997#8203#0" expanded="false" />
+                <element signature="e#8391#8586#0" expanded="false" />
+                <element signature="e#8780#8937#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="stations_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="41" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.78571427" vertical-offset="498" max-vertical-offset="1242">
+            <state line="48" column="69" selection-start="2751" selection-end="2752" vertical-scroll-proportion="0.58239275" vertical-offset="606" max-vertical-offset="1242">
               <folding />
             </state>
           </provider>
@@ -697,7 +697,11 @@
       <created>1391044551208</created>
       <updated>1391044551208</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="working, datethings part 4&#10;">
+      <created>1391048268248</created>
+      <updated>1391048268248</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -705,7 +709,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110456556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3431517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30927834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32547864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18051359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -747,7 +751,8 @@
     <MESSAGE value="tried adjusting Date.today to get local date (not UTC date)" />
     <MESSAGE value="tried adjusting Date.today to get local date (not UTC date)&#10;" />
     <MESSAGE value="date things part 3, added if statement&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="date things part 3, added if statement&#10;" />
+    <MESSAGE value="working, datethings part 4&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="working, datethings part 4&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -796,14 +801,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="39" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4158">
           <folding>
-            <element signature="e#2963#3142#0" expanded="false" />
-            <element signature="e#3336#3598#0" expanded="false" />
-            <element signature="e#4662#4965#0" expanded="false" />
-            <element signature="e#5249#5586#0" expanded="false" />
-            <element signature="e#7419#7793#0" expanded="false" />
-            <element signature="e#8002#8208#0" expanded="false" />
-            <element signature="e#8396#8591#0" expanded="false" />
-            <element signature="e#8785#8942#0" expanded="false" />
+            <element signature="e#2958#3137#0" expanded="false" />
+            <element signature="e#3331#3593#0" expanded="false" />
+            <element signature="e#4657#4960#0" expanded="false" />
+            <element signature="e#5244#5581#0" expanded="false" />
+            <element signature="e#7414#7788#0" expanded="false" />
+            <element signature="e#7997#8203#0" expanded="false" />
+            <element signature="e#8391#8586#0" expanded="false" />
+            <element signature="e#8780#8937#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,14 +878,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="217" column="0" selection-start="9901" selection-end="9901" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4122">
           <folding>
-            <element signature="e#2963#3142#0" expanded="false" />
-            <element signature="e#3336#3598#0" expanded="false" />
-            <element signature="e#4662#4965#0" expanded="false" />
-            <element signature="e#5249#5586#0" expanded="false" />
-            <element signature="e#7419#7793#0" expanded="false" />
-            <element signature="e#8002#8208#0" expanded="false" />
-            <element signature="e#8396#8591#0" expanded="false" />
-            <element signature="e#8785#8942#0" expanded="false" />
+            <element signature="e#2958#3137#0" expanded="false" />
+            <element signature="e#3331#3593#0" expanded="false" />
+            <element signature="e#4657#4960#0" expanded="false" />
+            <element signature="e#5244#5581#0" expanded="false" />
+            <element signature="e#7414#7788#0" expanded="false" />
+            <element signature="e#7997#8203#0" expanded="false" />
+            <element signature="e#8391#8586#0" expanded="false" />
+            <element signature="e#8780#8937#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -941,14 +946,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="3798">
           <folding>
-            <element signature="e#2963#3142#0" expanded="false" />
-            <element signature="e#3336#3598#0" expanded="false" />
-            <element signature="e#4662#4965#0" expanded="false" />
-            <element signature="e#5249#5586#0" expanded="false" />
-            <element signature="e#7419#7793#0" expanded="false" />
-            <element signature="e#8002#8208#0" expanded="false" />
-            <element signature="e#8396#8591#0" expanded="false" />
-            <element signature="e#8785#8942#0" expanded="false" />
+            <element signature="e#2958#3137#0" expanded="false" />
+            <element signature="e#3331#3593#0" expanded="false" />
+            <element signature="e#4657#4960#0" expanded="false" />
+            <element signature="e#5244#5581#0" expanded="false" />
+            <element signature="e#7414#7788#0" expanded="false" />
+            <element signature="e#7997#8203#0" expanded="false" />
+            <element signature="e#8391#8586#0" expanded="false" />
+            <element signature="e#8780#8937#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1108,23 +1113,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="29" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="4302">
+        <state line="56" column="24" selection-start="2752" selection-end="2752" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="4302">
           <folding>
-            <element signature="e#2963#3142#0" expanded="false" />
-            <element signature="e#3336#3598#0" expanded="false" />
-            <element signature="e#4662#4965#0" expanded="false" />
-            <element signature="e#5249#5586#0" expanded="false" />
-            <element signature="e#7419#7793#0" expanded="false" />
-            <element signature="e#8002#8208#0" expanded="false" />
-            <element signature="e#8396#8591#0" expanded="false" />
-            <element signature="e#8785#8942#0" expanded="false" />
+            <element signature="e#2958#3137#0" expanded="false" />
+            <element signature="e#3331#3593#0" expanded="false" />
+            <element signature="e#4657#4960#0" expanded="false" />
+            <element signature="e#5244#5581#0" expanded="false" />
+            <element signature="e#7414#7788#0" expanded="false" />
+            <element signature="e#7997#8203#0" expanded="false" />
+            <element signature="e#8391#8586#0" expanded="false" />
+            <element signature="e#8780#8937#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="41" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.78571427" vertical-offset="498" max-vertical-offset="1242">
+        <state line="48" column="69" selection-start="2751" selection-end="2752" vertical-scroll-proportion="0.58239275" vertical-offset="606" max-vertical-offset="1242">
           <folding />
         </state>
       </provider>
