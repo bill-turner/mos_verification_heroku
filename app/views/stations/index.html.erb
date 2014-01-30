@@ -25,15 +25,13 @@
 </div>
 
 <div id="plot_window"></div>
-<div id="footnote"> Click and drag over the line graph to zoom. Click on the name of the series
+<div id="footnote"> Click on the name of the series
   in the chart legend to remove that series from the graph. </br>
   Check out the source code or help build this app via
 <a href="http://www.github.com/bill-turner/mos_verification_heroku">Github</a>
 </div>
 
-<div id="stats">This is where i will display the verification of the past few days of forecasts.
-I will run some code on the backend to figure out bias for each model run, look into precip data (eventually)
-and give a forecast for tomorrow as well</div>
+<div id="stats">display forecast statistics from past 3 days</div>
 <script type='text/javascript'>
 
 $(document).ready(function(){
@@ -67,7 +65,7 @@ $(document).ready(function(){
         tooltip: {
             shared: true,
             useHTML: true,
-            xDateFormat: '%Y-%m-%d %H:%M',
+            xDateFormat: '%Y-%m-%d %H:%M UTC',
             headerFormat: '<small>{point.key}</small><table>',
             pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
             '<td style="text-align: right"><b>{point.y}</b></td></tr>',

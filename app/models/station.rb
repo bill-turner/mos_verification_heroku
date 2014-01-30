@@ -47,13 +47,13 @@ class Station < ActiveRecord::Base
       runtime=#{date}%20#{hourstring}&model=#{model}".gsub(" ","")
     forecast = Station.parse_forecast(url)
     forecast_hash = Station.make_mos_hash(forecast)
-    if forecast_hash.empty?
-      date = (Date.today - 1.day).to_s
-      url = "http://mesonet.agron.iastate.edu/mos/csv.php?station=#{self.name}&  \
-        runtime=#{date}%20#{hourstring}&model=#{model}".gsub(" ","")
-      forecast = Station.parse_forecast(url)
-      forecast_hash = Station.make_mos_hash(forecast)
-    end
+    #if forecast_hash.empty?
+    #  date = (Date.today - 1.day).to_s
+    #  url = "http://mesonet.agron.iastate.edu/mos/csv.php?station=#{self.name}&  \
+    #    runtime=#{date}%20#{hourstring}&model=#{model}".gsub(" ","")
+    #  forecast = Station.parse_forecast(url)
+    #  forecast_hash = Station.make_mos_hash(forecast)
+    #end
     return forecast_hash
   end
 #------------------------------------------------------------------------------------------
