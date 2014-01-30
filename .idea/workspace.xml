@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
+    <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="fixed graph title&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -16,8 +19,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mos_verification@db_migrate__mos_verification.coverage" NAME="db:migrate: mos_verification Coverage Results" MODIFIED="1390690570779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_drop__mos_verification.coverage" NAME="db:drop: mos_verification Coverage Results" MODIFIED="1390672423879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
+    <SUITE FILE_PATH="coverage/mos_verification@Development__mos_verification.coverage" NAME="Development: mos_verification Coverage Results" MODIFIED="1391057526006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@Rails_console__mos_verification.coverage" NAME="Rails console: mos_verification Coverage Results" MODIFIED="1391056362659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
-    <SUITE FILE_PATH="coverage/mos_verification@Development__mos_verification.coverage" NAME="Development: mos_verification Coverage Results" MODIFIED="1391037043522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_create__mos_verification.coverage" NAME="db:create: mos_verification Coverage Results" MODIFIED="1390672441187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -41,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stations_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="22" selection-start="2995" selection-end="2995" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1296">
+            <state line="61" column="8" selection-start="3189" selection-end="3189" vertical-scroll-proportion="0.7076205" vertical-offset="643" max-vertical-offset="1296">
               <folding />
             </state>
           </provider>
@@ -53,21 +56,30 @@
       <file leaf-file-name="stations.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="810">
+            <state line="26" column="10" selection-start="560" selection-end="560" vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.84653467" vertical-offset="216" max-vertical-offset="3690">
+            <state line="35" column="28" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-14.148149" vertical-offset="248" max-vertical-offset="864">
               <folding>
-                <marker date="1391057212135" expanded="true" signature="2861:2882" placeholder="..." />
-                <marker date="1391057212135" expanded="true" signature="2932:2949" placeholder="..." />
-                <marker date="1391057212135" expanded="true" signature="5011:5031" placeholder="..." />
+                <element signature="e#1913#4186#0" expanded="false" />
+                <marker date="1391058344005" expanded="true" signature="2799:2820" placeholder="..." />
+                <marker date="1391058344005" expanded="true" signature="2870:2887" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,10 +131,10 @@
         <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/app/views/stations/windrose.html.erb" />
         <option value="$PROJECT_DIR$/viewcode.txt" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
         <option value="$PROJECT_DIR$/app/models/station.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       </list>
     </option>
   </component>
@@ -134,10 +146,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="-1688" />
+    <option name="y" value="-141" />
+    <option name="width" value="1696" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -289,7 +301,7 @@
       <recent name="C:\Sites\mos_verification\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="IRB console.Rails console: mos_verification">
+  <component name="RunManager" selected="Rails.Development: mos_verification">
     <configuration default="false" name="db:create: mos_verification" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="mos_verification" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -716,24 +728,28 @@
       <created>1391057096552</created>
       <updated>1391057096552</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixed graph title">
+      <created>1391057231148</created>
+      <updated>1391057231148</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-1688" y="-141" width="1696" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110456556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3078056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3078056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18051359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19486405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15750916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43004417" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30385014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32795155" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -773,7 +789,8 @@
     <MESSAGE value="removed windrose, added winddir, wsp back to time series. Still datething from the top though, again. from the top" />
     <MESSAGE value="putting timestamp into view" />
     <MESSAGE value="removing date data from header" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing date data from header" />
+    <MESSAGE value="fixed graph title" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed graph title" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -811,9 +828,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3366">
           <folding>
-            <marker date="1391057212135" expanded="true" signature="2861:2882" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="2932:2949" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="5011:5031" placeholder="..." />
+            <element signature="e#1913#4186#0" expanded="false" />
+            <marker date="1391058344005" expanded="true" signature="2799:2820" placeholder="..." />
+            <marker date="1391058344005" expanded="true" signature="2870:2887" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -857,9 +874,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="140" column="30" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3366">
           <folding>
-            <marker date="1391057212135" expanded="true" signature="2861:2882" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="2932:2949" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="5011:5031" placeholder="..." />
+            <element signature="e#1913#4186#0" expanded="false" />
+            <marker date="1391058344005" expanded="true" signature="2799:2820" placeholder="..." />
+            <marker date="1391058344005" expanded="true" signature="2870:2887" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -921,9 +938,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="23" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2358">
           <folding>
-            <marker date="1391057212135" expanded="true" signature="2861:2882" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="2932:2949" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="5011:5031" placeholder="..." />
+            <element signature="e#1913#4186#0" expanded="false" />
+            <marker date="1391058344005" expanded="true" signature="2799:2820" placeholder="..." />
+            <marker date="1391058344005" expanded="true" signature="2870:2887" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -980,9 +997,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="64" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="2070">
           <folding>
-            <marker date="1391057212135" expanded="true" signature="2861:2882" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="2932:2949" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="5011:5031" placeholder="..." />
+            <element signature="e#1913#4186#0" expanded="false" />
+            <marker date="1391058344005" expanded="true" signature="2799:2820" placeholder="..." />
+            <marker date="1391058344005" expanded="true" signature="2870:2887" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1041,11 +1058,6 @@
         <state line="21" column="14" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="1188" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="23" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1044" />
@@ -1087,9 +1099,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="810">
+        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
           <folding />
         </state>
       </provider>
@@ -1101,21 +1113,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="22" selection-start="2995" selection-end="2995" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1296">
+        <state line="35" column="28" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-14.148149" vertical-offset="248" max-vertical-offset="864">
+          <folding>
+            <element signature="e#1913#4186#0" expanded="false" />
+            <marker date="1391058344005" expanded="true" signature="2799:2820" placeholder="..." />
+            <marker date="1391058344005" expanded="true" signature="2870:2887" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="10" selection-start="560" selection-end="560" vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.84653467" vertical-offset="216" max-vertical-offset="3690">
-          <folding>
-            <marker date="1391057212135" expanded="true" signature="2861:2882" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="2932:2949" placeholder="..." />
-            <marker date="1391057212135" expanded="true" signature="5011:5031" placeholder="..." />
-          </folding>
+        <state line="61" column="8" selection-start="3189" selection-end="3189" vertical-scroll-proportion="0.7076205" vertical-offset="643" max-vertical-offset="1296">
+          <folding />
         </state>
       </provider>
     </entry>

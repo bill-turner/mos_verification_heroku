@@ -4,8 +4,7 @@
 
 <%fields=[['Temperature',:tmp],['Dewpoint',:dpt], ['Windspeed',:wsp],['Wind Direction',:wdr]]%>
 
-<div id="header">Statistical Representation and Verification of GFS/NAM MOS forecasts for the past week.</br>
-Check out the source code or help build this app via <a href="http://www.github.com/bill-turner/mos_verification_heroku">Github</a>
+<div id="header"> Visualization of today's GFS/NAM MOS Forecasts.
 </div>
 
 <div id="state_options">
@@ -26,9 +25,10 @@ Check out the source code or help build this app via <a href="http://www.github.
 </div>
 
 <div id="plot_window"></div>
-</br></br></br>
 <div id="footnote"> Click and drag over the line graph to zoom. Click on the name of the series
-  in the chart legend to remove that series from the graph.
+  in the chart legend to remove that series from the graph. </br>
+  Check out the source code or help build this app via
+<a href="http://www.github.com/bill-turner/mos_verification_heroku">Github</a>
 </div>
 
 <script type='text/javascript'>
@@ -45,7 +45,7 @@ $(document).ready(function(){
         rangeSelector: {
 	    	selected: 1
 	    },
-        colors: ['#0000CC','#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
+        colors: ['#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
         legend: {
             itemStyle: {
                 fontSize: '16px'
@@ -93,11 +93,6 @@ $(document).ready(function(){
         },
         series: [{
             type: 'spline',
-            name: 'SFC OBS',
-            data: <%= @obs.to_json %>
-        },
-        {
-            type: 'spline',
             name: 'GFS 00Z',
             data: <%= @gfs0Z.to_json %>
         },
@@ -125,71 +120,6 @@ $(document).ready(function(){
             data: <%= @nam12Z.to_json %>
         }]
     });
-
-    $('#windrose').highcharts({
-	    chart: {
-	        polar: true,
-	        type: 'line'
-	    },
-        colors: ['#00FF00','#00CC00','#00AA00','#009900', '#FF0000','#BB0000'],
-	    title: {
-	        text: 'Forecasted Wind for the next 3 days [kts]',
-	        x: -30
-	    },
-	    pane: {
-	    	size: '80%'
-	    },
-	    xAxis: {
-	        categories: ['North', 'Northeast', 'East', 'Southeast', 'South',
-	        'Southwest','West','Northwest'],
-	        tickmarkPlacement: 'between',
-	        lineWidth: 0
-	    },
-	    yAxis: {
-	        lineWidth: 0,
-	        min: 0
-	    },
-	    tooltip: {
-	    	shared: true,
-	        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} kts</b><br/>'
-	    },
-	    legend: {
-	        align: 'right',
-	        verticalAlign: 'top',
-	        y: 30,
-	        layout: 'vertical'
-	    },
-	    series: [{
-            name: 'GFS 0Z',
-            data: <%= @gfs0Zwind.to_json %>,
-            pointPlacement: 'on'
-        },
-	    {
-            name: 'GFS 06Z',
-            data: <%= @gfs06Zwind.to_json %>,
-	        pointPlacement: 'on'
-	    },
-	    {
-	        name: 'GFS 12Z',
-	        data: <%= @gfs12Zwind.to_json %>,
-	        pointPlacement: 'on'
-	    },
-	    {
-	        name: 'GFS 18Z',
-	        data: <%= @gfs18Zwind.to_json %>,
-	        pointPlacement: 'on'
-	    },
-	    {
-	        name: 'NAM 0Z',
-	        data: <%= @nam0Zwind.to_json %>,
-	        pointPlacement: 'on'
-	    },
-	    {
-	        name: 'NAM 12Z',
-	        data: <%= @nam12Zwind.to_json %>,
-	        pointPlacement: 'on'
-	    }]
-	})
 });//document ready function
 </script>
 
