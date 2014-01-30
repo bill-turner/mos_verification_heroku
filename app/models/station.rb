@@ -65,6 +65,17 @@ class Station < ActiveRecord::Base
     data.delete_at 0
     return data
   end
+
+  def get_model_initialization_date()
+    require 'open-uri'
+    date = Date.today.to_s
+    hash_array = Array.new
+    url = "http://mesonet.agron.iastate.edu/mos/csv.php?station=#{self.name}&  \
+      runtime=#{date}%2000:00&model=GFS".gsub(" ","")
+    data = Nokogiri.HTML(open(url)).text.split("\n").to_a.map {|row| row.split(',')}
+    data.delete_at 0
+    date = data[0][2].to_date.to_s
+  end
 #-------------------------------------------------------------------------------------------
 
   #loop through array of arrays ('data') made in the 'parse_forecast', create an array of hashes
