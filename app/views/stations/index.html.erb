@@ -2,7 +2,7 @@
 <script src="http://code.highcharts.com/highcharts-more.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-<%fields=[['Temperature',:tmp],['Dewpoint',:dpt]]%>
+<%fields=[['Temperature',:tmp],['Dewpoint',:dpt], ['Windspeed',:wsp],['Wind Direction',:wdr]]%>
 
 <div id="header">Statistical Representation and Verification of GFS/NAM MOS forecasts for the past week.</br>
 Check out the source code or help build this app via <a href="http://www.github.com/bill-turner/mos_verification_heroku">Github</a>
@@ -26,7 +26,6 @@ Check out the source code or help build this app via <a href="http://www.github.
 </div>
 
 <div id="plot_window"></div>
-<div id="windrose"></div>
 </br></br></br>
 <div id="footnote"> Click and drag over the line graph to zoom. Click on the name of the series
   in the chart legend to remove that series from the graph.</div>
