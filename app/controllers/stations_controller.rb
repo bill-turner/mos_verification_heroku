@@ -50,8 +50,6 @@ class StationsController < ApplicationController
       elsif params[:userfield]=="wsp" then @var="Wind Speed [knots]"
       end
 
-      ###heroku keeps giving me the datestring in UTC time, so this will account for it
-      date = @station.get_model_initialization_date
       @titlestring = "Today's MOS Forecasts for #{@station.longname}, #{@station.state} (all times UTC)"
 
     end
