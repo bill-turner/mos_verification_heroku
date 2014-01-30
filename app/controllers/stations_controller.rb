@@ -49,7 +49,11 @@ class StationsController < ApplicationController
       elsif params[:userfield]=="wdr" then @var="Wind Direction [deg]"
       elsif params[:userfield]=="wsp" then @var="Wind Speed [knots]"
       end
-      @titlestring = "#{@station.longname}-#{@station.state} #{Date.today.to_s} MOS Forecasts (all times UTC)"
+
+      ###heroku keeps giving me the datestring in UTC time, so this will account for it
+      date = Time.now.to_date.to_s
+      if Time.now.to_date != Time.now.utc.to_date then date = (Time.now.utc.to_date-1.day) end
+      @titlestring = "#{@station.longname}-#{@station.state} #{date} MOS Forecasts (all times UTC)"
 
     end
   end
