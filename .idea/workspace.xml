@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/station.rb" afterPath="$PROJECT_DIR$/app/models/station.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -35,16 +36,16 @@
       <file leaf-file-name="station.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="5" selection-start="6876" selection-end="6877" vertical-scroll-proportion="0.51428574" vertical-offset="1782" max-vertical-offset="4158">
+            <state line="47" column="26" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.6857143" vertical-offset="558" max-vertical-offset="4176">
               <folding>
-                <element signature="e#2632#2811#0" expanded="false" />
-                <element signature="e#3005#3267#0" expanded="false" />
-                <element signature="e#4331#4634#0" expanded="false" />
-                <element signature="e#4918#5255#0" expanded="false" />
-                <element signature="e#7088#7462#0" expanded="false" />
-                <element signature="e#7671#7877#0" expanded="false" />
-                <element signature="e#8065#8260#0" expanded="false" />
-                <element signature="e#8454#8611#0" expanded="false" />
+                <element signature="e#2647#2826#0" expanded="false" />
+                <element signature="e#3020#3282#0" expanded="false" />
+                <element signature="e#4346#4649#0" expanded="false" />
+                <element signature="e#4933#5270#0" expanded="false" />
+                <element signature="e#7103#7477#0" expanded="false" />
+                <element signature="e#7686#7892#0" expanded="false" />
+                <element signature="e#8080#8275#0" expanded="false" />
+                <element signature="e#8469#8626#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -791,14 +792,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="39" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4158">
           <folding>
-            <element signature="e#2632#2811#0" expanded="false" />
-            <element signature="e#3005#3267#0" expanded="false" />
-            <element signature="e#4331#4634#0" expanded="false" />
-            <element signature="e#4918#5255#0" expanded="false" />
-            <element signature="e#7088#7462#0" expanded="false" />
-            <element signature="e#7671#7877#0" expanded="false" />
-            <element signature="e#8065#8260#0" expanded="false" />
-            <element signature="e#8454#8611#0" expanded="false" />
+            <element signature="e#2647#2826#0" expanded="false" />
+            <element signature="e#3020#3282#0" expanded="false" />
+            <element signature="e#4346#4649#0" expanded="false" />
+            <element signature="e#4933#5270#0" expanded="false" />
+            <element signature="e#7103#7477#0" expanded="false" />
+            <element signature="e#7686#7892#0" expanded="false" />
+            <element signature="e#8080#8275#0" expanded="false" />
+            <element signature="e#8469#8626#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -868,14 +869,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="217" column="0" selection-start="9901" selection-end="9901" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4122">
           <folding>
-            <element signature="e#2632#2811#0" expanded="false" />
-            <element signature="e#3005#3267#0" expanded="false" />
-            <element signature="e#4331#4634#0" expanded="false" />
-            <element signature="e#4918#5255#0" expanded="false" />
-            <element signature="e#7088#7462#0" expanded="false" />
-            <element signature="e#7671#7877#0" expanded="false" />
-            <element signature="e#8065#8260#0" expanded="false" />
-            <element signature="e#8454#8611#0" expanded="false" />
+            <element signature="e#2647#2826#0" expanded="false" />
+            <element signature="e#3020#3282#0" expanded="false" />
+            <element signature="e#4346#4649#0" expanded="false" />
+            <element signature="e#4933#5270#0" expanded="false" />
+            <element signature="e#7103#7477#0" expanded="false" />
+            <element signature="e#7686#7892#0" expanded="false" />
+            <element signature="e#8080#8275#0" expanded="false" />
+            <element signature="e#8469#8626#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -936,14 +937,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="3798">
           <folding>
-            <element signature="e#2632#2811#0" expanded="false" />
-            <element signature="e#3005#3267#0" expanded="false" />
-            <element signature="e#4331#4634#0" expanded="false" />
-            <element signature="e#4918#5255#0" expanded="false" />
-            <element signature="e#7088#7462#0" expanded="false" />
-            <element signature="e#7671#7877#0" expanded="false" />
-            <element signature="e#8065#8260#0" expanded="false" />
-            <element signature="e#8454#8611#0" expanded="false" />
+            <element signature="e#2647#2826#0" expanded="false" />
+            <element signature="e#3020#3282#0" expanded="false" />
+            <element signature="e#4346#4649#0" expanded="false" />
+            <element signature="e#4933#5270#0" expanded="false" />
+            <element signature="e#7103#7477#0" expanded="false" />
+            <element signature="e#7686#7892#0" expanded="false" />
+            <element signature="e#8080#8275#0" expanded="false" />
+            <element signature="e#8469#8626#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1110,16 +1111,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="5" selection-start="6876" selection-end="6877" vertical-scroll-proportion="0.51428574" vertical-offset="1782" max-vertical-offset="4158">
+        <state line="47" column="26" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.6857143" vertical-offset="558" max-vertical-offset="4176">
           <folding>
-            <element signature="e#2632#2811#0" expanded="false" />
-            <element signature="e#3005#3267#0" expanded="false" />
-            <element signature="e#4331#4634#0" expanded="false" />
-            <element signature="e#4918#5255#0" expanded="false" />
-            <element signature="e#7088#7462#0" expanded="false" />
-            <element signature="e#7671#7877#0" expanded="false" />
-            <element signature="e#8065#8260#0" expanded="false" />
-            <element signature="e#8454#8611#0" expanded="false" />
+            <element signature="e#2647#2826#0" expanded="false" />
+            <element signature="e#3020#3282#0" expanded="false" />
+            <element signature="e#4346#4649#0" expanded="false" />
+            <element signature="e#4933#5270#0" expanded="false" />
+            <element signature="e#7103#7477#0" expanded="false" />
+            <element signature="e#7686#7892#0" expanded="false" />
+            <element signature="e#8080#8275#0" expanded="false" />
+            <element signature="e#8469#8626#0" expanded="false" />
           </folding>
         </state>
       </provider>

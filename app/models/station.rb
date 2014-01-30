@@ -45,7 +45,7 @@ class Station < ActiveRecord::Base
     other_date = Time.now.to_date
     hash_array = Array.new
     url = "http://mesonet.agron.iastate.edu/mos/csv.php?station=#{self.name}&  \
-      runtime=#{date}%20#{hourstring}&model=#{model}".gsub(" ","")
+      runtime=#{other_date}%20#{hourstring}&model=#{model}".gsub(" ","")
     forecast = Station.parse_forecast(url)
     forecast_hash = Station.make_mos_hash(forecast)
   end
