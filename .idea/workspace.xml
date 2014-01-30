@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/station.rb" afterPath="$PROJECT_DIR$/app/models/station.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -17,7 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mos_verification@db_migrate__mos_verification.coverage" NAME="db:migrate: mos_verification Coverage Results" MODIFIED="1390690570779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_drop__mos_verification.coverage" NAME="db:drop: mos_verification Coverage Results" MODIFIED="1390672423879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
-    <SUITE FILE_PATH="coverage/mos_verification@Rails_console__mos_verification.coverage" NAME="Rails console: mos_verification Coverage Results" MODIFIED="1391043982333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
+    <SUITE FILE_PATH="coverage/mos_verification@Rails_console__mos_verification.coverage" NAME="Rails console: mos_verification Coverage Results" MODIFIED="1391044566480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@Development__mos_verification.coverage" NAME="Development: mos_verification Coverage Results" MODIFIED="1391037043522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
     <SUITE FILE_PATH="coverage/mos_verification@db_create__mos_verification.coverage" NAME="db:create: mos_verification Coverage Results" MODIFIED="1390672441187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mos_verification" />
   </component>
@@ -33,28 +32,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="station.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="station.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="26" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.6857143" vertical-offset="558" max-vertical-offset="4176">
+            <state line="56" column="29" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="4302">
               <folding>
-                <element signature="e#2647#2826#0" expanded="false" />
-                <element signature="e#3020#3282#0" expanded="false" />
-                <element signature="e#4346#4649#0" expanded="false" />
-                <element signature="e#4933#5270#0" expanded="false" />
-                <element signature="e#7103#7477#0" expanded="false" />
-                <element signature="e#7686#7892#0" expanded="false" />
-                <element signature="e#8080#8275#0" expanded="false" />
-                <element signature="e#8469#8626#0" expanded="false" />
+                <element signature="e#2963#3142#0" expanded="false" />
+                <element signature="e#3336#3598#0" expanded="false" />
+                <element signature="e#4662#4965#0" expanded="false" />
+                <element signature="e#5249#5586#0" expanded="false" />
+                <element signature="e#7419#7793#0" expanded="false" />
+                <element signature="e#8002#8208#0" expanded="false" />
+                <element signature="e#8396#8591#0" expanded="false" />
+                <element signature="e#8785#8942#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stations_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1242">
+            <state line="46" column="41" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.78571427" vertical-offset="498" max-vertical-offset="1242">
               <folding />
             </state>
           </provider>
@@ -128,11 +127,11 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/app/views/stations/windrose.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
         <option value="$PROJECT_DIR$/viewcode.txt" />
         <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/stations.css.scss" />
         <option value="$PROJECT_DIR$/app/models/station.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
       </list>
     </option>
   </component>
@@ -694,15 +693,19 @@
       <created>1391044031148</created>
       <updated>1391044031148</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="date things part 3, added if statement&#10;">
+      <created>1391044551208</created>
+      <updated>1391044551208</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110456556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3431517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3431517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32547864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18051359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -743,7 +746,8 @@
     <MESSAGE value="got rid of historical forecast/obs data. Now displaying data from todays model runs only" />
     <MESSAGE value="tried adjusting Date.today to get local date (not UTC date)" />
     <MESSAGE value="tried adjusting Date.today to get local date (not UTC date)&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="tried adjusting Date.today to get local date (not UTC date)&#10;" />
+    <MESSAGE value="date things part 3, added if statement&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="date things part 3, added if statement&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -792,14 +796,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="39" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4158">
           <folding>
-            <element signature="e#2647#2826#0" expanded="false" />
-            <element signature="e#3020#3282#0" expanded="false" />
-            <element signature="e#4346#4649#0" expanded="false" />
-            <element signature="e#4933#5270#0" expanded="false" />
-            <element signature="e#7103#7477#0" expanded="false" />
-            <element signature="e#7686#7892#0" expanded="false" />
-            <element signature="e#8080#8275#0" expanded="false" />
-            <element signature="e#8469#8626#0" expanded="false" />
+            <element signature="e#2963#3142#0" expanded="false" />
+            <element signature="e#3336#3598#0" expanded="false" />
+            <element signature="e#4662#4965#0" expanded="false" />
+            <element signature="e#5249#5586#0" expanded="false" />
+            <element signature="e#7419#7793#0" expanded="false" />
+            <element signature="e#8002#8208#0" expanded="false" />
+            <element signature="e#8396#8591#0" expanded="false" />
+            <element signature="e#8785#8942#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,14 +873,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="217" column="0" selection-start="9901" selection-end="9901" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4122">
           <folding>
-            <element signature="e#2647#2826#0" expanded="false" />
-            <element signature="e#3020#3282#0" expanded="false" />
-            <element signature="e#4346#4649#0" expanded="false" />
-            <element signature="e#4933#5270#0" expanded="false" />
-            <element signature="e#7103#7477#0" expanded="false" />
-            <element signature="e#7686#7892#0" expanded="false" />
-            <element signature="e#8080#8275#0" expanded="false" />
-            <element signature="e#8469#8626#0" expanded="false" />
+            <element signature="e#2963#3142#0" expanded="false" />
+            <element signature="e#3336#3598#0" expanded="false" />
+            <element signature="e#4662#4965#0" expanded="false" />
+            <element signature="e#5249#5586#0" expanded="false" />
+            <element signature="e#7419#7793#0" expanded="false" />
+            <element signature="e#8002#8208#0" expanded="false" />
+            <element signature="e#8396#8591#0" expanded="false" />
+            <element signature="e#8785#8942#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -937,14 +941,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="3798">
           <folding>
-            <element signature="e#2647#2826#0" expanded="false" />
-            <element signature="e#3020#3282#0" expanded="false" />
-            <element signature="e#4346#4649#0" expanded="false" />
-            <element signature="e#4933#5270#0" expanded="false" />
-            <element signature="e#7103#7477#0" expanded="false" />
-            <element signature="e#7686#7892#0" expanded="false" />
-            <element signature="e#8080#8275#0" expanded="false" />
-            <element signature="e#8469#8626#0" expanded="false" />
+            <element signature="e#2963#3142#0" expanded="false" />
+            <element signature="e#3336#3598#0" expanded="false" />
+            <element signature="e#4662#4965#0" expanded="false" />
+            <element signature="e#5249#5586#0" expanded="false" />
+            <element signature="e#7419#7793#0" expanded="false" />
+            <element signature="e#8002#8208#0" expanded="false" />
+            <element signature="e#8396#8591#0" expanded="false" />
+            <element signature="e#8785#8942#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1084,13 +1088,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1242">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="17" selection-start="4459" selection-end="4459" vertical-scroll-proportion="-4.6666665" vertical-offset="2250" max-vertical-offset="3672">
@@ -1111,17 +1108,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/station.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="26" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.6857143" vertical-offset="558" max-vertical-offset="4176">
+        <state line="56" column="29" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="4302">
           <folding>
-            <element signature="e#2647#2826#0" expanded="false" />
-            <element signature="e#3020#3282#0" expanded="false" />
-            <element signature="e#4346#4649#0" expanded="false" />
-            <element signature="e#4933#5270#0" expanded="false" />
-            <element signature="e#7103#7477#0" expanded="false" />
-            <element signature="e#7686#7892#0" expanded="false" />
-            <element signature="e#8080#8275#0" expanded="false" />
-            <element signature="e#8469#8626#0" expanded="false" />
+            <element signature="e#2963#3142#0" expanded="false" />
+            <element signature="e#3336#3598#0" expanded="false" />
+            <element signature="e#4662#4965#0" expanded="false" />
+            <element signature="e#5249#5586#0" expanded="false" />
+            <element signature="e#7419#7793#0" expanded="false" />
+            <element signature="e#8002#8208#0" expanded="false" />
+            <element signature="e#8396#8591#0" expanded="false" />
+            <element signature="e#8785#8942#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="41" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.78571427" vertical-offset="498" max-vertical-offset="1242">
+          <folding />
         </state>
       </provider>
     </entry>

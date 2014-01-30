@@ -54,7 +54,7 @@ class Station < ActiveRecord::Base
       forecast = Station.parse_forecast(url)
       forecast_hash = Station.make_mos_hash(forecast)
     end
-    return forecast_hash
+    return forecast_hash,date
   end
 #------------------------------------------------------------------------------------------
 
