@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="removed bootstrap&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140210055202_create_observations.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/observation.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/observation_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/observations.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mos_verification.iml" afterPath="$PROJECT_DIR$/.idea/mos_verification.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/station.rb" afterPath="$PROJECT_DIR$/app/models/station.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
+    <list default="true" id="445ec114-3d8d-4a83-a103-55b9518479a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mos_verification.iws" />
@@ -84,7 +71,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="17" selection-start="2337" selection-end="2338" vertical-scroll-proportion="0.37582418" vertical-offset="594" max-vertical-offset="2574">
+            <state line="52" column="17" selection-start="2337" selection-end="2338" vertical-scroll-proportion="0.37665197" vertical-offset="594" max-vertical-offset="2574">
               <folding>
                 <marker date="1394404074533" expanded="false" signature="2814:2835" placeholder="..." />
                 <marker date="1394404074533" expanded="false" signature="2885:2902" placeholder="..." />
@@ -727,13 +714,18 @@
       <created>1391157979561</created>
       <updated>1391157979561</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="got rid of ASOS csv files">
+      <created>1394404502285</created>
+      <updated>1394404502285</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-8" width="1696" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110456556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4287812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -749,7 +741,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32547864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -767,7 +758,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="full deploy test1&#10;" />
     <MESSAGE value="started working on radar chart for wind data." />
     <MESSAGE value="wind rose is complete. next step is to smooth the obs out and eliminate some data points" />
     <MESSAGE value="windrose test3&#10;" />
@@ -792,7 +782,8 @@
     <MESSAGE value="added bootstrap, lets see how responsive this is" />
     <MESSAGE value="tweaked positioning a little" />
     <MESSAGE value="removed bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed bootstrap" />
+    <MESSAGE value="got rid of ASOS csv files" />
+    <option name="LAST_COMMIT_MESSAGE" value="got rid of ASOS csv files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1088,7 +1079,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="17" selection-start="2337" selection-end="2338" vertical-scroll-proportion="0.37582418" vertical-offset="594" max-vertical-offset="2574">
+        <state line="52" column="17" selection-start="2337" selection-end="2338" vertical-scroll-proportion="0.37665197" vertical-offset="594" max-vertical-offset="2574">
           <folding>
             <marker date="1394404074533" expanded="false" signature="2814:2835" placeholder="..." />
             <marker date="1394404074533" expanded="false" signature="2885:2902" placeholder="..." />
