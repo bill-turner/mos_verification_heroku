@@ -36,9 +36,13 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     descriptive_statistics (1.1.2)
+    domain_name (0.5.15)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -50,14 +54,26 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (2.7.2)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0.0)
+      mime-types (~> 1.17, >= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.4)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     nokogiri (1.6.1-x86-mingw32)
       mini_portile (~> 0.5.0)
+    ntlm-http (0.1.1)
     pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.3)
@@ -93,6 +109,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    smarter_csv (1.0.17)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -115,6 +132,11 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.3)
+      unf_ext
+    unf_ext (0.0.6)
+    unf_ext (0.0.6-x86-mingw32)
+    webrobots (0.1.1)
 
 PLATFORMS
   x86-mingw32
@@ -124,11 +146,13 @@ DEPENDENCIES
   descriptive_statistics
   jbuilder (~> 1.2)
   jquery-rails
+  mechanize
   nokogiri
   pg
   rails (= 4.0.0)
   rails_12factor
   sass-rails (~> 4.0.0)
   sdoc
+  smarter_csv
   turbolinks
   uglifier (>= 1.3.0)

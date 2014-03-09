@@ -3,7 +3,7 @@
 <script src="http://code.highcharts.com/highcharts-more.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-<%fields=[['Temperature',:tmp],['Dewpoint',:dpt], ['Windspeed',:wsp],['Wind Direction',:wdr]]%>
+<%fields=[['Temperature',:tmp],['Dewpoint',:dwp], ['Windspeed',:wsp],['Wind Direction',:wdr]]%>
 
 <div id="header"> Visualization of today's GFS/NAM MOS Forecasts.
 </div>
@@ -46,7 +46,7 @@ $(document).ready(function(){
         rangeSelector: {
 	    	selected: 1
 	    },
-        colors: ['#00FF00','#00CC00','#00AA00','#005600', '#FF0000','#BB0000'],
+        colors: ['#00FF00','#00CC00','#00AA00','#005600', '#FF0000','#BB0000', '#0022DD'],
         legend: {
             itemStyle: {
                 fontSize: '16px'
@@ -121,6 +121,11 @@ $(document).ready(function(){
             type: 'spline',
             name: 'NAM 12Z',
             data: <%= @nam12Z.to_json %>
+        },
+        {
+            type: 'spline',
+            name: 'SFC OBS',
+            data: <%= @obs.to_json %>
         }]
     });
 });//document ready function

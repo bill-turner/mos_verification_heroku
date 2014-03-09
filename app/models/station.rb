@@ -1,9 +1,6 @@
 class Station < ActiveRecord::Base
+has_many :observations
 
-#### NOTE: both the obs and fcst functions have a parameter that should be some sort of
-#### model-wide constant value that is used to determine how far back into the past we want
-#### our forecast to go. Right now it is set to go to 'Today.day - 6.days' which will give
-#### us a full week of forecasts to look at.
 #--------------------------------------------------------------------------------------
 
   #this method will import data from the lib/stationlist.txt file into our database
@@ -128,7 +125,7 @@ class Station < ActiveRecord::Base
 #--------------------------------------------------------------------------------------------------------
 
      #############################################################################################
-     ################### OBSERVATION TIME SERIES FUNCTIONS ##########################################
+     ################ HISTORICAL OBSERVATION DATA FUNCTIONS ##########################################
      #############################################################################################
 
 #-------------------------------------------------------------------------------------------------------
@@ -137,9 +134,8 @@ class Station < ActiveRecord::Base
   def fetch_past_obs(userfield)
     begin_day, begin_month, begin_year, end_day, end_month, end_year = Station.get_date_info
     url =  "http://mesonet.agron.iastate.edu/cgi-bin/request/getData.py?station=#{self.name[1..3]}& \
-    data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=p01i&data=mslp&&data=skyc1& \
-    year1=#{begin_year}&year2=#{end_year}&month1=#{begin_month}&month2=#{end_month}&day1=#{begin_day}&\
-    day2=#{end_day}&tz=GMT&format=comma&latlon=no".gsub!(/\s+/,"")
+    data=tmpf&data=dwpf&data=drct&data=sknt&data=p01i \
+    year1=2011&year2=2013&month1=1&month2=12&day1=1&day2=31&tz=GMT&format=comma&latlon=no".gsub!(/\s+/,"")
     puts "#{url}"
     obs = Station.parse_obs(url)
     ob_hash = Station.make_obs_hash(obs)
@@ -190,94 +186,167 @@ class Station < ActiveRecord::Base
 
 #--------------------------------------------------------------------------------------------------------
 
-  #get data from obs for past 6 hrs
-  #def get_obs_from_past_6hrs(hash,field)
-  #  six_hr_threshold = (Time.now - 6.hours).datetime.to_i
-  #  output_array = Array.new
-  #  hash.each do |row|
-  #    if row[:ftime.to_datetime.to_i]>six_hr_threshold
-  #      output_array.push(row)
-  #    end
-  #  end
-  #end
+
 
 #--------------------------------------------------------------------------------------------------------
-     #############################################################################################
-     ################### WINDROSE PROCESSING FUNCTIONS ##########################################
-     #############################################################################################
+     #####################################################################################################
+     #################  3 DAY OBHISTORY FUNCTIONS #######################################################
+     ###################################################################################################
 #--------------------------------------------------------------------------------------------------------
 
+  #connect to the NWS 3day obhistory page and grab data from current day only!
+  def self.get_todays_obs_for(name,field)
+    require 'open-uri'
+    url = "http://w1.weather.gov/data/obhistory/#{name}.html"
+    table = Nokogiri.HTML(open(url)).xpath('//table[4]//tr//td')
+    zone = Nokogiri.HTML(open(url)).xpath('//table[4]//th').text[9..11]
+    b_o_d = Time.now.beginning_of_day
+    hash_array = []
 
-  #will fetch mos wind data for the past few days (excluding today)
-  #this data will be compared to the observed data over the same timeframe
-  def make_forecasted_windrose(forecast_array)
-    hash_array = Station.prep_wind_forecast(forecast_array).compact
-    sorted_data = Station.sort_wind_data(hash_array)
-    view_data = Station.process_windrose_data_from(sorted_data)
-  end  #input the hash_array with the forecast data, pull out the wdr data, sort it into bins [N,NE,E,SE,...,W,NW]
-  #------------------------------------------------------------------------------------------------------------
+    table.each_slice(18) do |row|
+      flag_time = Time.new(b_o_d.year,b_o_d.month,b_o_d.day,0,0,0,b_o_d.utc_offset/60/60)
 
-  #loop over forecast data and for each row, create a hash {:wdr=>'XXX',:wsp=>'XX'}
-  #output is an array of hashes like this... [{:wdr=>'220',:wsp=>'19'},......]
-  def self.prep_wind_forecast(forecast)
-    output = forecast.map do |row|
-        {:wdr => row[:wdr], :wsp => row[:wsp]}
-    end
-    return output
-  end
+      day = row[0].text.to_i
+      time = row[1].text
+      hours = time[0..1].to_i
+      minutes = time[3..4].to_i
+      tmp = row[6].text.to_f
+      dwp = row[7].text.to_f
+      wsp = row[8].text.scan(/\d+/)[0].to_f
 
-  #fetch_obs, make the hash of wind data, sort it into bins (N,NE,E...), then loop over each bin and
-  #compute the average value of all wind data for that bin
-  def make_observed_windrose()
-    obs = self.fetch_past_obs("wsp")
-    hash = Station.make_obs_windrose_hash(obs)
-    sorted_data = Station.sort_wind_data(hash)
-    view_data = Station.process_windrose_data_from(sorted_data)
-  end
-#-------------------------------------------------------------------------------------------------------
+      processed_row = process_row_with_timezone(zone,b_o_d,day,hours,minutes,tmp,dwp,wsp)
+      row_time = processed_row[0]
 
-  #create a hash_array containing wdr and wsp, send this output into the sort_wind_data function
-  def self.make_obs_windrose_hash(obs)
-    output = obs.map do |row|
-      {:wdr => row[:wdr], :wsp => row[:wsp]}
-    end
-  end
-
-  #sort the wind data into bins. [337.5-22.49 = 'N', 22.5-67.49='NE',....]
-  def self.sort_wind_data(hash)
-    binned_data = Array.new
-    n = hash.map {|row| if row[:wdr].to_f.between?(0,22.49)&&row[:wdr].to_f.between?(337.5,360) then row[:wsp].to_f end}
-    ne = (hash.map {|row| if row[:wdr].to_f.between?(22.5,67.49) then row[:wsp].to_f end})
-    e = (hash.map {|row| if row[:wdr].to_f.between?(67.5,112.49) then row[:wsp].to_f end})
-    se = (hash.map {|row| if row[:wdr].to_f.between?(112.5,157.49) then row[:wsp].to_f end})
-    s = (hash.map {|row| if row[:wdr].to_f.between?(157.5,202.49) then row[:wsp].to_f end})
-    sw = (hash.map {|row| if row[:wdr].to_f.between?(202.5,247.49) then row[:wsp].to_f end})
-    w = (hash.map {|row| if row[:wdr].to_f.between?(247.5,292.49) then row[:wsp].to_f end})
-    nw = (hash.map {|row| if row[:wdr].to_f.between?(292.5,337.49) then row[:wsp].to_f end})
-    binned_data.push(n,ne,e,se,s,sw,w,nw)
-    output_array = binned_data.map {|row| row.compact}
-    return output_array
-  end
-#----------------------------------------------------------------------------------------------------
-
-  #input the sorted wind data, average out the values for each bin and shove the results into an array
-  def self.process_windrose_data_from(wsp_hash)
-    #each bin is a predefined set of angles found in the 'sort_wind_data' function right above this
-    #the output will be an array, each slot filled with the average windspeed for that bin
-    output = Array.new
-    #loop over each bin. find average of all elements in each row (sometimes there are zero!)
-    0.upto(7) do |bin|
-      sum = 0
-      if wsp_hash[bin].length == 0
-        avg = 0
-      else
-        wsp_hash[bin].each {|s| sum = sum + s}
-        avg = (sum/wsp_hash[bin].length).round(2)
+      if row_time>flag_time
+        hash_array.push(:time => row_time,:tmp => tmp, :dwp => dwp, :wsp => wsp)
       end
-      output.push(avg)
+
+    end
+    view_data = prep_hash_array_for_view(hash_array,field)
+  end
+
+  #need to create the timestamp for the row by adding the UTC OFFSET
+  #output will be an array will neccessary data [dtstring,tmp,dwp,wsp]
+  def self.process_row_with_timezone(zone,bod,day,hours,minutes,tmp,dwp,wsp)
+    if zone=='edt'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-04:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='est'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-05:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='cdt'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-05:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='cst'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-06:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='mdt'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-06:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='mst'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-07:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='pdt'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-07:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='pst'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-08:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='akdt'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-08:00")
+      output = [t,tmp,dwp,wsp]
+    elsif zone=='akst'
+      t = Time.new(bod.year,bod.month,day,hours,minutes,0,"-09:00")
+      output = [t,tmp,dwp,wsp]
     end
     return output
   end
+
+  def self.prep_hash_array_for_view(hash_array,field)
+    view_data = hash_array.map do |h|
+      [h[:time].to_datetime.to_i*1000, h[field.to_sym]]
+    end
+  end
+
+
+
+#--------------------------------------------------------------------------------------------------------
+     #############################################################################################
+     ################### windrose processing functions ##########################################
+     #############################################################################################
+#--------------------------------------------------------------------------------------------------------
+
+#
+#  #will fetch mos wind data for the past few days (excluding today)
+#  #this data will be compared to the observed data over the same timeframe
+#  def make_forecasted_windrose(forecast_array)
+#    hash_array = station.prep_wind_forecast(forecast_array).compact
+#    sorted_data = station.sort_wind_data(hash_array)
+#    view_data = station.process_windrose_data_from(sorted_data)
+#  end  #input the hash_array with the forecast data, pull out the wdr data, sort it into bins [n,ne,e,se,...,w,nw]
+#  #------------------------------------------------------------------------------------------------------------
+#
+#  #loop over forecast data and for each row, create a hash {:wdr=>'xxx',:wsp=>'xx'}
+#  #output is an array of hashes like this... [{:wdr=>'220',:wsp=>'19'},......]
+#  def self.prep_wind_forecast(forecast)
+#    output = forecast.map do |row|
+#        {:wdr => row[:wdr], :wsp => row[:wsp]}
+#    end
+#    return output
+#  end
+#
+#  #fetch_obs, make the hash of wind data, sort it into bins (n,ne,e...), then loop over each bin and
+#  #compute the average value of all wind data for that bin
+#  def make_observed_windrose()
+#    obs = self.fetch_past_obs("wsp")
+#    hash = station.make_obs_windrose_hash(obs)
+#    sorted_data = station.sort_wind_data(hash)
+#    view_data = station.process_windrose_data_from(sorted_data)
+#  end
+##-------------------------------------------------------------------------------------------------------
+#
+#  #create a hash_array containing wdr and wsp, send this output into the sort_wind_data function
+#  def self.make_obs_windrose_hash(obs)
+#    output = obs.map do |row|
+#      {:wdr => row[:wdr], :wsp => row[:wsp]}
+#    end
+#  end
+#
+#  #sort the wind data into bins. [337.5-22.49 = 'n', 22.5-67.49='ne',....]
+#  def self.sort_wind_data(hash)
+#    binned_data = array.new
+#    n = hash.map {|row| if row[:wdr].to_f.between?(0,22.49)&&row[:wdr].to_f.between?(337.5,360) then row[:wsp].to_f end}
+#    ne = (hash.map {|row| if row[:wdr].to_f.between?(22.5,67.49) then row[:wsp].to_f end})
+#    e = (hash.map {|row| if row[:wdr].to_f.between?(67.5,112.49) then row[:wsp].to_f end})
+#    se = (hash.map {|row| if row[:wdr].to_f.between?(112.5,157.49) then row[:wsp].to_f end})
+#    s = (hash.map {|row| if row[:wdr].to_f.between?(157.5,202.49) then row[:wsp].to_f end})
+#    sw = (hash.map {|row| if row[:wdr].to_f.between?(202.5,247.49) then row[:wsp].to_f end})
+#    w = (hash.map {|row| if row[:wdr].to_f.between?(247.5,292.49) then row[:wsp].to_f end})
+#    nw = (hash.map {|row| if row[:wdr].to_f.between?(292.5,337.49) then row[:wsp].to_f end})
+#    binned_data.push(n,ne,e,se,s,sw,w,nw)
+#    output_array = binned_data.map {|row| row.compact}
+#    return output_array
+#  end
+##----------------------------------------------------------------------------------------------------
+#
+#  #input the sorted wind data, average out the values for each bin and shove the results into an array
+#  def self.process_windrose_data_from(wsp_hash)
+#    #each bin is a predefined set of angles found in the 'sort_wind_data' function right above this
+#    #the output will be an array, each slot filled with the average windspeed for that bin
+#    output = array.new
+#    #loop over each bin. find average of all elements in each row (sometimes there are zero!)
+#    0.upto(7) do |bin|
+#      sum = 0
+#      if wsp_hash[bin].length == 0
+#        avg = 0
+#      else
+#        wsp_hash[bin].each {|s| sum = sum + s}
+#        avg = (sum/wsp_hash[bin].length).round(2)
+#      end
+#      output.push(avg)
+#    end
+#    return output
+#  end
 #----------------------------------------------------------------------------------------------------
 
 end #endclass

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  belongs_to: 
+  validtime: 2014-02-09 23:52:02
+  tmp: 1.5
+  dwp: 1.5
+  winddir: 1.5
+  windspd: 1.5
+  p_01: 1.5
+
+two:
+  belongs_to: 
+  validtime: 2014-02-09 23:52:02
+  tmp: 1.5
+  dwp: 1.5
+  winddir: 1.5
+  windspd: 1.5
+  p_01: 1.5

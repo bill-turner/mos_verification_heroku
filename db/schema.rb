@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125183706) do
+ActiveRecord::Schema.define(version: 20140210055202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "observations", force: true do |t|
+    t.integer  "station_id"
+    t.datetime "validtime"
+    t.float    "tmp"
+    t.float    "dwp"
+    t.float    "winddir"
+    t.float    "windspd"
+    t.float    "p_01"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "stations", force: true do |t|
     t.string   "name"

@@ -36,16 +36,17 @@ class StationsController < ApplicationController
       @gfs18Z = Station.prep_mos_array(@station.fetch_todays_mos("GFS","18:00"),@userfield)
       @nam0Z = Station.prep_mos_array(@station.fetch_todays_mos("NAM","00:00"),@userfield)
       @nam12Z = Station.prep_mos_array(@station.fetch_todays_mos("NAM","12:00"),@userfield)
+      @obs = Station.get_todays_obs_for(@userstation,@userfield)
 
-      @gfs0Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","00:00"))
-      @gfs06Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","06:00"))
-      @gfs12Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","12:00"))
-      @gfs18Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","18:00"))
-      @nam0Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("NAM","00:00"))
-      @nam12Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("NAM","12:00"))
+      #@gfs0Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","00:00"))
+      #@gfs06Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","06:00"))
+      #@gfs12Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","12:00"))
+      #@gfs18Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("GFS","18:00"))
+      #@nam0Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("NAM","00:00"))
+      #@nam12Zwind = @station.make_forecasted_windrose(@station.fetch_todays_mos("NAM","12:00"))
 
       if params[:userfield]=="tmp" then @var="Temperature [F]"
-      elsif params[:userfield]=="dpt" then @var="Dewpoint [F]"
+      elsif params[:userfield]=="dwp" then @var="Dewpoint [F]"
       elsif params[:userfield]=="wdr" then @var="Wind Direction [deg]"
       elsif params[:userfield]=="wsp" then @var="Wind Speed [knots]"
       end
@@ -53,6 +54,10 @@ class StationsController < ApplicationController
       @titlestring = "Today's MOS Forecasts for #{@station.longname}, #{@station.state} (all times UTC)"
 
     end
+  end
+
+  def precip
+
   end
 
   def add_stations_from(state)
